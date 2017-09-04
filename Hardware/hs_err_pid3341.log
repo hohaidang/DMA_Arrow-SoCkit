@@ -1,0 +1,1668 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f99cf456f05, pid=3341, tid=140301013174016
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_05-b13) (build 1.8.0_05-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.5-b02 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libcusp160_parser.so+0xa8f05]  jni_ParserLink_c::logMessage(int, char const*)+0x25
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000538
+
+Registers:
+RAX=0x00007f99cf94d481, RBX=0x00007f99cf94d8f0, RCX=0x00007f9a5fcbd9cd, RDX=0x00007f99cf94d480
+RSP=0x00007fff6794d7d0, RBP=0x00007fff6794deb0, RSI=0x00007f99cf94d480, RDI=0x00007f99fc6f51e0
+R8 =0x0000000000000000, R9 =0x00007f9a600d29d0, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x00007f9a56cb3000, R13=0x0000000000000000, R14=0x00007f9a600d4700, R15=0x00007f9a600d2d28
+RIP=0x00007f99cf456f05, EFLAGS=0x0000000000010202, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fff6794d7d0)
+0x00007fff6794d7d0:   0000000000000000 00007f99cf94d480
+0x00007fff6794d7e0:   00007fff6794deb0 00007f99cf94d480
+0x00007fff6794d7f0:   0000000000000000 00007f99cf449f2f
+0x00007fff6794d800:   000000000000000a 00007fff6794deb0
+0x00007fff6794d810:   00007fff6794de10 00007f99cf44a0c9
+0x00007fff6794d820:   00007f9a600d2700 00007f99cf4e9a58
+0x00007fff6794d830:   0000000000000000 00007f9a5f5064a0
+0x00007fff6794d840:   0000000000000001 0000000000000000
+0x00007fff6794d850:   0000000000000000 0000000000000002
+0x00007fff6794d860:   0000000000000000 00000000000000ca
+0x00007fff6794d870:   00007f9a600d29d0 0000000000000000
+0x00007fff6794d880:   0000000000000246 00007fff6794de10
+0x00007fff6794d890:   0000000000000000 00007f9a600d4700
+0x00007fff6794d8a0:   00007f9a600d2d28 00007f9a600d29d0
+0x00007fff6794d8b0:   0000000000000000 00007fff6794deb0
+0x00007fff6794d8c0:   00007f9a600d2700 0000000000000d0f
+0x00007fff6794d8d0:   00000000000000ca 00007f9a5fcbd9cd
+0x00007fff6794d8e0:   00007fff6794de00 00007f9a5fcbd9cb
+0x00007fff6794d8f0:   0000000000000246 0000000000000033
+0x00007fff6794d900:   0000000000000000 0000000000000000
+0x00007fff6794d910:   0000000000000000 0000000000000000
+0x00007fff6794d920:   00007fff6794da00 00007fff6794d998
+0x00007fff6794d930:   000000007972d654 0000000001e5cb59
+0x00007fff6794d940:   00007fff00000014 00007fff6794da70
+0x00007fff6794d950:   00007f9a5f4e1ff8 00007f9a5f4d4d80
+0x00007fff6794d960:   00007fff6794d994 0000000000000000
+0x00007fff6794d970:   0000000001ffd1c0 0000000000000000
+0x00007fff6794d980:   000000000000000e 00007fff6794dab0
+0x00007fff6794d990:   000000005f4e1ff8 0000000000000000
+0x00007fff6794d9a0:   00007fff6794d9d4 00007f9a600f6b60
+0x00007fff6794d9b0:   00007fff6794db00 00007f9a600d5260
+0x00007fff6794d9c0:   0000000000000000 00007f9a600f6808 
+
+Instructions: (pc=0x00007f99cf456f05)
+0x00007f99cf456ee5:   41 54 49 89 fc 55 53 48 83 ec 08 48 85 d2 74 2b
+0x00007f99cf456ef5:   48 8b 1d 0c 59 4d 00 48 89 d6 48 8b 3b 4c 8b 07
+0x00007f99cf456f05:   41 ff 90 38 05 00 00 48 85 c0 48 89 c5 75 3b 48
+0x00007f99cf456f15:   83 c4 08 5b 5d 41 5c 41 5d c3 90 48 8b 05 d1 4e 
+
+Register to memory mapping:
+
+RAX=0x00007f99cf94d481: <offset 0x59f481> in /home/ngocsang/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so at 0x00007f99cf3ae000
+RBX=0x00007f99cf94d8f0: _ZN8jni_base5s_envE+0 in /home/ngocsang/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so at 0x00007f99cf3ae000
+RCX=0x00007f9a5fcbd9cd: pthread_join+0xbd in /lib/x86_64-linux-gnu/libpthread.so.0 at 0x00007f9a5fcb5000
+RDX=0x00007f99cf94d480: <offset 0x59f480> in /home/ngocsang/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so at 0x00007f99cf3ae000
+RSP=0x00007fff6794d7d0 is an unknown value
+RBP=0x00007fff6794deb0 is an unknown value
+RSI=0x00007f99cf94d480: <offset 0x59f480> in /home/ngocsang/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so at 0x00007f99cf3ae000
+RDI=0x00007f99fc6f51e0 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x00007f9a600d29d0 is pointing into the stack for thread: 0x00007f9a4c010800
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x00007f9a56cb3000 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x00007f9a600d4700 is an unknown value
+R15=0x00007f9a600d2d28 is pointing into the stack for thread: 0x00007f9a4c010800
+
+
+Stack: [0x00007fff67858000,0x00007fff67958000],  sp=0x00007fff6794d7d0,  free space=981k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libcusp160_parser.so+0xa8f05]  jni_ParserLink_c::logMessage(int, char const*)+0x25
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:synchronizing (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f9a4c00cb90] Safepoint_lock - owner thread: 0x00007f9a4c1b5000
+[0x00007f9a4c00cc10] Threads_lock - owner thread: 0x00007f9a4c1b5000
+
+Heap:
+ def new generation   total 336128K, used 147789K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K,  45% used [0x00000000a2400000, 0x00000000aa87af28, 0x00000000b47d0000)
+  from space 37312K,  32% used [0x00000000b6c40000, 0x00000000b7818740, 0x00000000b90b0000)
+  to   space 37312K,   0% used [0x00000000b47d0000, 0x00000000b47d0000, 0x00000000b6c40000)
+ tenured generation   total 746732K, used 517171K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  69% used [0x00000000c1800000, 0x00000000e110cc60, 0x00000000e110ce00, 0x00000000ef13b000)
+ Metaspace       used 63256K, capacity 65068K, committed 65232K, reserved 1105920K
+  class space    used 8261K, capacity 8646K, committed 8704K, reserved 1048576K
+
+Card table byte_map: [0x00007f9a5a0fb000,0x00007f9a5a3ea000] byte_map_base: 0x00007f9a59be9000
+
+Polling page: 0x00007f9a600ed000
+
+CodeCache: size=245760Kb used=66871Kb max_used=70019Kb free=178889Kb
+ bounds [0x00007f9a3d000000, 0x00007f9a414c0000, 0x00007f9a4c000000]
+ total_blobs=17756 nmethods=17013 adapters=653
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 6048.520 Thread 0x00007f9a4c1ee800 24350       3       sun.awt.X11.XAtom::equals (44 bytes)
+Event: 6048.567 Thread 0x00007f9a4c1ee800 nmethod 24350 0x00007f9a3d4b6310 code [0x00007f9a3d4b6480, 0x00007f9a3d4b6890]
+Event: 6049.170 Thread 0x00007f9a4c1ee800 24351       3       sun.awt.X11.XSelection::access$500 (6 bytes)
+Event: 6049.210 Thread 0x00007f9a4c1ee800 nmethod 24351 0x00007f9a3ddba190 code [0x00007f9a3ddba300, 0x00007f9a3ddba468]
+Event: 6049.210 Thread 0x00007f9a4c1ee800 24352   !   3       sun.awt.X11.XSelection::handleSelectionRequest (240 bytes)
+Event: 6050.811 Thread 0x00007f9a4c1ee800 nmethod 24352 0x00007f9a3d615e90 code [0x00007f9a3d616460, 0x00007f9a3d619718]
+Event: 6050.811 Thread 0x00007f9a4c1ee800 24353   !   3       sun.awt.X11.XSelection$SelectionEventHandler::dispatchEvent (210 bytes)
+Event: 6053.530 Thread 0x00007f9a4c1ee800 nmethod 24353 0x00007f9a402a6e10 code [0x00007f9a402a75c0, 0x00007f9a402ac018]
+Event: 6053.530 Thread 0x00007f9a4c1ee800 24354       3       sun.awt.X11.XSelectionRequestEvent::get_target (20 bytes)
+Event: 6053.579 Thread 0x00007f9a4c1ee800 nmethod 24354 0x00007f9a40f767d0 code [0x00007f9a40f76960, 0x00007f9a40f76ce8]
+
+GC Heap History (10 events):
+Event: 2617.478 GC heap before
+{Heap before GC invocations=798 (full 10):
+ def new generation   total 336128K, used 298816K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K, 100% used [0x00000000a2400000, 0x00000000b47d0000, 0x00000000b47d0000)
+  from space 37312K,   0% used [0x00000000b47d0000, 0x00000000b47d0000, 0x00000000b6c40000)
+  to   space 37312K,   0% used [0x00000000b6c40000, 0x00000000b6c40000, 0x00000000b90b0000)
+ tenured generation   total 746732K, used 448036K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  59% used [0x00000000c1800000, 0x00000000dcd89340, 0x00000000dcd89400, 0x00000000ef13b000)
+ Metaspace       used 63186K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8260K, capacity 8646K, committed 8704K, reserved 1048576K
+Event: 2617.576 GC heap after
+Heap after GC invocations=799 (full 10):
+ def new generation   total 336128K, used 27684K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000b47d0000)
+  from space 37312K,  74% used [0x00000000b6c40000, 0x00000000b87493e0, 0x00000000b90b0000)
+  to   space 37312K,   0% used [0x00000000b47d0000, 0x00000000b47d0000, 0x00000000b6c40000)
+ tenured generation   total 746732K, used 457999K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  61% used [0x00000000c1800000, 0x00000000dd743cf8, 0x00000000dd743e00, 0x00000000ef13b000)
+ Metaspace       used 63186K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8260K, capacity 8646K, committed 8704K, reserved 1048576K
+}
+Event: 2617.942 GC heap before
+{Heap before GC invocations=799 (full 10):
+ def new generation   total 336128K, used 326500K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K, 100% used [0x00000000a2400000, 0x00000000b47d0000, 0x00000000b47d0000)
+  from space 37312K,  74% used [0x00000000b6c40000, 0x00000000b87493e0, 0x00000000b90b0000)
+  to   space 37312K,   0% used [0x00000000b47d0000, 0x00000000b47d0000, 0x00000000b6c40000)
+ tenured generation   total 746732K, used 457999K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  61% used [0x00000000c1800000, 0x00000000dd743cf8, 0x00000000dd743e00, 0x00000000ef13b000)
+ Metaspace       used 63186K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8260K, capacity 8646K, committed 8704K, reserved 1048576K
+Event: 2618.130 GC heap after
+Heap after GC invocations=800 (full 10):
+ def new generation   total 336128K, used 37312K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000b47d0000)
+  from space 37312K, 100% used [0x00000000b47d0000, 0x00000000b6c40000, 0x00000000b6c40000)
+  to   space 37312K,   0% used [0x00000000b6c40000, 0x00000000b6c40000, 0x00000000b90b0000)
+ tenured generation   total 746732K, used 480192K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  64% used [0x00000000c1800000, 0x00000000decf00c0, 0x00000000decf0200, 0x00000000ef13b000)
+ Metaspace       used 63186K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8260K, capacity 8646K, committed 8704K, reserved 1048576K
+}
+Event: 2618.176 GC heap before
+{Heap before GC invocations=800 (full 10):
+ def new generation   total 336128K, used 336128K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K, 100% used [0x00000000a2400000, 0x00000000b47d0000, 0x00000000b47d0000)
+  from space 37312K, 100% used [0x00000000b47d0000, 0x00000000b6c40000, 0x00000000b6c40000)
+  to   space 37312K,   0% used [0x00000000b6c40000, 0x00000000b6c40000, 0x00000000b90b0000)
+ tenured generation   total 746732K, used 480192K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  64% used [0x00000000c1800000, 0x00000000decf00c0, 0x00000000decf0200, 0x00000000ef13b000)
+ Metaspace       used 63186K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8260K, capacity 8646K, committed 8704K, reserved 1048576K
+Event: 2618.257 GC heap after
+Heap after GC invocations=801 (full 10):
+ def new generation   total 336128K, used 2076K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000b47d0000)
+  from space 37312K,   5% used [0x00000000b6c40000, 0x00000000b6e47090, 0x00000000b90b0000)
+  to   space 37312K,   0% used [0x00000000b47d0000, 0x00000000b47d0000, 0x00000000b6c40000)
+ tenured generation   total 746732K, used 517171K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  69% used [0x00000000c1800000, 0x00000000e110cc60, 0x00000000e110ce00, 0x00000000ef13b000)
+ Metaspace       used 63186K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8260K, capacity 8646K, committed 8704K, reserved 1048576K
+}
+Event: 2618.297 GC heap before
+{Heap before GC invocations=801 (full 10):
+ def new generation   total 336128K, used 300892K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K, 100% used [0x00000000a2400000, 0x00000000b47d0000, 0x00000000b47d0000)
+  from space 37312K,   5% used [0x00000000b6c40000, 0x00000000b6e47090, 0x00000000b90b0000)
+  to   space 37312K,   0% used [0x00000000b47d0000, 0x00000000b47d0000, 0x00000000b6c40000)
+ tenured generation   total 746732K, used 517171K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  69% used [0x00000000c1800000, 0x00000000e110cc60, 0x00000000e110ce00, 0x00000000ef13b000)
+ Metaspace       used 63186K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8260K, capacity 8646K, committed 8704K, reserved 1048576K
+Event: 2618.300 GC heap after
+Heap after GC invocations=802 (full 10):
+ def new generation   total 336128K, used 5830K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000b47d0000)
+  from space 37312K,  15% used [0x00000000b47d0000, 0x00000000b4d81920, 0x00000000b6c40000)
+  to   space 37312K,   0% used [0x00000000b6c40000, 0x00000000b6c40000, 0x00000000b90b0000)
+ tenured generation   total 746732K, used 517171K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  69% used [0x00000000c1800000, 0x00000000e110cc60, 0x00000000e110ce00, 0x00000000ef13b000)
+ Metaspace       used 63186K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8260K, capacity 8646K, committed 8704K, reserved 1048576K
+}
+Event: 3517.577 GC heap before
+{Heap before GC invocations=802 (full 10):
+ def new generation   total 336128K, used 304646K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K, 100% used [0x00000000a2400000, 0x00000000b47d0000, 0x00000000b47d0000)
+  from space 37312K,  15% used [0x00000000b47d0000, 0x00000000b4d81920, 0x00000000b6c40000)
+  to   space 37312K,   0% used [0x00000000b6c40000, 0x00000000b6c40000, 0x00000000b90b0000)
+ tenured generation   total 746732K, used 517171K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  69% used [0x00000000c1800000, 0x00000000e110cc60, 0x00000000e110ce00, 0x00000000ef13b000)
+ Metaspace       used 63227K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8261K, capacity 8646K, committed 8704K, reserved 1048576K
+Event: 3523.159 GC heap after
+Heap after GC invocations=803 (full 10):
+ def new generation   total 336128K, used 12129K [0x00000000a2400000, 0x00000000b90b0000, 0x00000000c1800000)
+  eden space 298816K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000b47d0000)
+  from space 37312K,  32% used [0x00000000b6c40000, 0x00000000b7818740, 0x00000000b90b0000)
+  to   space 37312K,   0% used [0x00000000b47d0000, 0x00000000b47d0000, 0x00000000b6c40000)
+ tenured generation   total 746732K, used 517171K [0x00000000c1800000, 0x00000000ef13b000, 0x0000000100000000)
+   the space 746732K,  69% used [0x00000000c1800000, 0x00000000e110cc60, 0x00000000e110ce00, 0x00000000ef13b000)
+ Metaspace       used 63227K, capacity 65004K, committed 65232K, reserved 1105920K
+  class space    used 8261K, capacity 8646K, committed 8704K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 2660.047 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=null_check action=make_not_entrant pc=0x00007f9a3d7df7f8 method=java.lang.Class.reflectionData()Ljava/lang/Class$ReflectionData; @ 24
+Event: 2660.047 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f9a3ed05e1c method=javax.swing.plaf.basic.BasicTextUI.installUI(Ljavax/swing/JComponent;)V @ 40
+Event: 2660.048 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f9a3e4af23c method=javax.swing.plaf.basic.BasicTextUI.updateBackground(Ljavax/swing/text/JTextComponent;)V @ 28
+Event: 2660.059 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f9a3fc402bc method=javax.swing.text.AbstractDocument.fireChangedUpdate(Ljavax/swing/event/DocumentEvent;)V @ 39
+Event: 2660.119 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f9a3e96ed30 method=javax.swing.text.AbstractDocument.fireChangedUpdate(Ljavax/swing/event/DocumentEvent;)V @ 39
+Event: 2660.166 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f9a4018eaa8 method=javax.swing.text.html.BlockView.layoutMinorAxis(II[I[I)V @ 122
+Event: 3016.106 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f9a3d1a06d4 method=bibliothek.gui.dock.station.split.Leaf.getMinimumSize()Ljava/awt/Dimension; @ 51
+Event: 3016.282 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f9a3d1a06d4 method=bibliothek.gui.dock.station.split.Leaf.getMinimumSize()Ljava/awt/Dimension; @ 51
+Event: 3016.282 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f9a3d1a06d4 method=bibliothek.gui.dock.station.split.Leaf.getMinimumSize()Ljava/awt/Dimension; @ 51
+Event: 3016.306 Thread 0x00007f9a4c8b6800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f9a3d1a06d4 method=bibliothek.gui.dock.station.split.Leaf.getMinimumSize()Ljava/awt/Dimension; @ 51
+
+Internal exceptions (10 events):
+Event: 2433.197 Thread 0x00007f99fc628800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a5e64240) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jvm.cpp, line 1248]
+Event: 2433.197 Thread 0x00007f99fc628800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a5e64d60) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jvm.cpp, line 1248]
+Event: 2433.197 Thread 0x00007f99fc628800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a5e781f8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jvm.cpp, line 1248]
+Event: 2433.197 Thread 0x00007f99fc628800 Exception <a 'java/lang/ClassNotFoundException': com/altera/sopcmodel/transforms/mm/MerlinSystem$BorderModuleCustomizer> (0x00000000a5e785f8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/classfile/systemDictionary.cp
+Event: 2433.753 Thread 0x00007f99fc628800 Implicit null exception at 0x00007f9a40e025d9 to 0x00007f9a40e02735
+Event: 2433.753 Thread 0x00007f99fc628800 Implicit null exception at 0x00007f9a40b13eff to 0x00007f9a40b14025
+Event: 2660.037 Thread 0x00007f9a4c8b6800 Implicit null exception at 0x00007f9a3d738c84 to 0x00007f9a3d739fc5
+Event: 2660.047 Thread 0x00007f9a4c8b6800 Implicit null exception at 0x00007f9a3d7df243 to 0x00007f9a3d7df7e1
+Event: 2660.290 Thread 0x00007f9a4c8b6800 Exception <a 'java/lang/UnsupportedOperationException': > (0x00000000b280f068) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jni.cpp, line 742]
+Event: 2696.177 Thread 0x00007f9a4c8b6800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000b2bb3010) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jvm.cpp, line 1248]
+
+Events (10 events):
+Event: 4597.639 Thread 0x00007f9a4c1ea800 flushing nmethod 0x00007f9a412fd790
+Event: 4598.012 Thread 0x00007f9a4c1ea800 flushing nmethod 0x00007f9a41352590
+Event: 4598.651 Thread 0x00007f9a4c1ea800 flushing nmethod 0x00007f9a41410fd0
+Event: 4598.990 Thread 0x00007f9a4c1ea800 flushing nmethod 0x00007f9a414834d0
+Event: 5504.961 Thread 0x00007f9a4c5b4800 DEOPT PACKING pc=0x00007f9a3d3bfa7e sp=0x00007f9a3c86c840
+Event: 5505.217 Thread 0x00007f9a4c5b4800 DEOPT UNPACKING pc=0x00007f9a3d04741a sp=0x00007f9a3c86c5d0 mode 0
+Event: 5572.191 Executing VM operation: BulkRevokeBias
+Event: 5578.417 Executing VM operation: BulkRevokeBias done
+Event: 6551.712 Executing VM operation: RevokeBias
+Event: 6552.197 loading class sun/misc/Signal$1
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:03 5245779                            /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/bin/java
+00600000-00601000 rw-p 00000000 08:03 5245779                            /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/bin/java
+01ffb000-0201c000 rw-p 00000000 00:00 0                                  [heap]
+a2400000-b90b0000 rw-p 00000000 00:00 0 
+b90b0000-c1800000 ---p 00000000 00:00 0 
+c1800000-ef13b000 rw-p 00000000 00:00 0 
+ef13b000-100000000 ---p 00000000 00:00 0 
+100000000-100880000 rw-p 00000000 00:00 0 
+100880000-140000000 ---p 00000000 00:00 0 
+7f9990000000-7f9990021000 rw-p 00000000 00:00 0 
+7f9990021000-7f9994000000 ---p 00000000 00:00 0 
+7f9998000000-7f9998050000 rw-p 00000000 00:00 0 
+7f9998050000-7f999c000000 ---p 00000000 00:00 0 
+7f999c000000-7f999c6da000 rw-p 00000000 00:00 0 
+7f999c6da000-7f99a0000000 ---p 00000000 00:00 0 
+7f99a0000000-7f99a2abc000 rw-p 00000000 00:00 0 
+7f99a2abc000-7f99a4000000 ---p 00000000 00:00 0 
+7f99a5173000-7f99a52b3000 rw-p 00000000 00:00 0 
+7f99a52b3000-7f99a5373000 ---p 00000000 00:00 0 
+7f99a5373000-7f99a5573000 rw-p 00000000 00:00 0 
+7f99a5573000-7f99a5773000 rw-p 00000000 00:00 0 
+7f99a5773000-7f99a5973000 rw-p 00000000 00:00 0 
+7f99a5973000-7f99a5b73000 rw-p 00000000 00:00 0 
+7f99a5b93000-7f99a5d36000 rw-s 00000000 00:05 5242911                    /SYSV00000000 (deleted)
+7f99a5ecf000-7f99a5f8d000 r-xp 00000000 08:03 5244570                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dygr_fdi.so
+7f99a5f8d000-7f99a618c000 ---p 000be000 08:03 5244570                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dygr_fdi.so
+7f99a618c000-7f99a6191000 rw-p 000bd000 08:03 5244570                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dygr_fdi.so
+7f99a6191000-7f99a6192000 rw-p 00000000 00:00 0 
+7f99a6192000-7f99a61cb000 r-xp 00000000 08:03 5244737                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_tapi.so
+7f99a61cb000-7f99a63ca000 ---p 00039000 08:03 5244737                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_tapi.so
+7f99a63ca000-7f99a63cd000 rw-p 00038000 08:03 5244737                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_tapi.so
+7f99a63cd000-7f99a659d000 r-xp 00000000 08:03 5243620                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_pti.so
+7f99a659d000-7f99a679c000 ---p 001d0000 08:03 5243620                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_pti.so
+7f99a679c000-7f99a67a6000 rw-p 001cf000 08:03 5243620                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_pti.so
+7f99a67a6000-7f99a67ad000 rw-p 00000000 00:00 0 
+7f99a67ad000-7f99a689f000 r-xp 00000000 08:03 5244665                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_fdi_data.so
+7f99a689f000-7f99a6a9e000 ---p 000f2000 08:03 5244665                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_fdi_data.so
+7f99a6a9e000-7f99a6aa8000 rw-p 000f1000 08:03 5244665                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_fdi_data.so
+7f99a6aa8000-7f99a6aab000 rw-p 00000000 00:00 0 
+7f99a6aab000-7f99a6abe000 r-xp 00000000 08:03 5243532                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_dist.so
+7f99a6abe000-7f99a6cbd000 ---p 00013000 08:03 5243532                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_dist.so
+7f99a6cbd000-7f99a6cbf000 rw-p 00012000 08:03 5243532                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_dist.so
+7f99a6cbf000-7f99a6cf3000 r-xp 00000000 08:03 5244339                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_ipsta.so
+7f99a6cf3000-7f99a6ef3000 ---p 00034000 08:03 5244339                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_ipsta.so
+7f99a6ef3000-7f99a6ef5000 rw-p 00034000 08:03 5244339                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_ipsta.so
+7f99a6ef5000-7f99a6f3d000 r-xp 00000000 08:03 5243650                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dspf.so
+7f99a6f3d000-7f99a713c000 ---p 00048000 08:03 5243650                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dspf.so
+7f99a713c000-7f99a713e000 rw-p 00047000 08:03 5243650                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dspf.so
+7f99a713e000-7f99a7947000 r-xp 00000000 08:03 5243234                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dcalc.so
+7f99a7947000-7f99a7b46000 ---p 00809000 08:03 5243234                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dcalc.so
+7f99a7b46000-7f99a7bf1000 rw-p 00808000 08:03 5243234                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dcalc.so
+7f99a7bf1000-7f99a7bf7000 rw-p 00000000 00:00 0 
+7f99a7bf7000-7f99a7c81000 r-xp 00000000 08:03 5244447                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_qspc.so
+7f99a7c81000-7f99a7e80000 ---p 0008a000 08:03 5244447                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_qspc.so
+7f99a7e80000-7f99a7e84000 rw-p 00089000 08:03 5244447                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_qspc.so
+7f99a7e84000-7f99a7e85000 rw-p 00000000 00:00 0 
+7f99a7e85000-7f99a7ea6000 r-xp 00000000 08:03 5244955                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_rpc.so
+7f99a7ea6000-7f99a80a5000 ---p 00021000 08:03 5244955                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_rpc.so
+7f99a80a5000-7f99a80a7000 rw-p 00020000 08:03 5244955                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_rpc.so
+7f99a80a7000-7f99a80c9000 r-xp 00000000 08:03 5244312                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_mps.so
+7f99a80c9000-7f99a82c8000 ---p 00022000 08:03 5244312                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_mps.so
+7f99a82c8000-7f99a82ca000 rw-p 00021000 08:03 5244312                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_mps.so
+7f99a82ca000-7f99a831b000 r-xp 00000000 08:03 5244970                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libzmq.so
+7f99a831b000-7f99a851b000 ---p 00051000 08:03 5244970                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libzmq.so
+7f99a851b000-7f99a851f000 rw-p 00051000 08:03 5244970                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libzmq.so
+7f99a851f000-7f99a8808000 r-xp 00000000 08:03 5244849                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_tis.so
+7f99a8808000-7f99a8a08000 ---p 002e9000 08:03 5244849                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_tis.so
+7f99a8a08000-7f99a8a22000 rw-p 002e9000 08:03 5244849                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_tis.so
+7f99a8a22000-7f99a8a37000 rw-p 00000000 00:00 0 
+7f99a8a37000-7f99a9162000 r-xp 00000000 08:03 5244455                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_b2t.so
+7f99a9162000-7f99a9361000 ---p 0072b000 08:03 5244455                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_b2t.so
+7f99a9361000-7f99a9625000 rw-p 0072a000 08:03 5244455                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_b2t.so
+7f99a9625000-7f99a9631000 rw-p 00000000 00:00 0 
+7f99a9631000-7f99a9994000 r-xp 00000000 08:03 5243722                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_core.so
+7f99a9994000-7f99a9b94000 ---p 00363000 08:03 5243722                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_core.so
+7f99a9b94000-7f99a9ba2000 rw-p 00363000 08:03 5243722                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_core.so
+7f99a9ba2000-7f99a9bb4000 rw-p 00000000 00:00 0 
+7f99a9bb4000-7f99a9bc1000 r-xp 00000000 08:03 5244830                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_routing.so
+7f99a9bc1000-7f99a9dc1000 ---p 0000d000 08:03 5244830                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_routing.so
+7f99a9dc1000-7f99a9dc2000 rw-p 0000d000 08:03 5244830                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_routing.so
+7f99a9dc2000-7f99a9e74000 r-xp 00000000 08:03 5244180                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_cdb_tcl.so
+7f99a9e74000-7f99aa074000 ---p 000b2000 08:03 5244180                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_cdb_tcl.so
+7f99aa074000-7f99aa076000 rw-p 000b2000 08:03 5244180                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_cdb_tcl.so
+7f99aa076000-7f99aa081000 rw-p 00000000 00:00 0 
+7f99aa081000-7f99aa1c8000 r-xp 00000000 08:03 5244255                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dlib.so
+7f99aa1c8000-7f99aa3c7000 ---p 00147000 08:03 5244255                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dlib.so
+7f99aa3c7000-7f99aa3d4000 rw-p 00146000 08:03 5244255                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dlib.so
+7f99aa3d4000-7f99aa3db000 rw-p 00000000 00:00 0 
+7f99aa3db000-7f99aa534000 r-xp 00000000 08:03 5243612                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_tdb.so
+7f99aa534000-7f99aa734000 ---p 00159000 08:03 5243612                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_tdb.so
+7f99aa734000-7f99aa73c000 rw-p 00159000 08:03 5243612                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_tdb.so
+7f99aa73c000-7f99aa740000 rw-p 00000000 00:00 0 
+7f99aa740000-7f99aa814000 r-xp 00000000 08:03 5243528                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_vdb.so
+7f99aa814000-7f99aaa14000 ---p 000d4000 08:03 5243528                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_vdb.so
+7f99aaa14000-7f99aaa18000 rw-p 000d4000 08:03 5243528                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_vdb.so
+7f99aaa18000-7f99aaa20000 rw-p 00000000 00:00 0 
+7f99aaa20000-7f99aaaf9000 r-xp 00000000 08:03 5243623                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_tim.so
+7f99aaaf9000-7f99aacf9000 ---p 000d9000 08:03 5243623                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_tim.so
+7f99aacf9000-7f99aacfe000 rw-p 000d9000 08:03 5243623                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_tim.so
+7f99aacfe000-7f99aad0a000 rw-p 00000000 00:00 0 
+7f99aad0a000-7f99aae8c000 r-xp 00000000 08:03 5243332                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_sin.so
+7f99aae8c000-7f99ab08c000 ---p 00182000 08:03 5243332                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_sin.so
+7f99ab08c000-7f99ab0ad000 rw-p 00182000 08:03 5243332                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_sin.so
+7f99ab0ad000-7f99ab0af000 rw-p 00000000 00:00 0 
+7f99ab0af000-7f99ab114000 r-xp 00000000 08:03 5244157                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_ioo.so
+7f99ab114000-7f99ab313000 ---p 00065000 08:03 5244157                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_ioo.so
+7f99ab313000-7f99ab31a000 rw-p 00064000 08:03 5244157                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_ioo.so
+7f99ab31a000-7f99ab31b000 rw-p 00000000 00:00 0 
+7f99ab31b000-7f99ab3ab000 r-xp 00000000 08:03 5244828                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qcu.so
+7f99ab3ab000-7f99ab5ab000 ---p 00090000 08:03 5244828                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qcu.so
+7f99ab5ab000-7f99ab5af000 rw-p 00090000 08:03 5244828                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qcu.so
+7f99ab5af000-7f99ab5b4000 r-xp 00000000 08:03 5244640                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtpi_tset.so
+7f99ab5b4000-7f99ab7b3000 ---p 00005000 08:03 5244640                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtpi_tset.so
+7f99ab7b3000-7f99ab7b4000 rw-p 00004000 08:03 5244640                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtpi_tset.so
+7f99ab7b4000-7f99ab7ef000 r-xp 00000000 08:03 5243299                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtpi_eti.so
+7f99ab7ef000-7f99ab9ef000 ---p 0003b000 08:03 5243299                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtpi_eti.so
+7f99ab9ef000-7f99ab9f6000 rw-p 0003b000 08:03 5243299                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtpi_eti.so
+7f99ab9f6000-7f99ababc000 r-xp 00000000 08:03 5243840                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_pjc.so
+7f99ababc000-7f99abcbb000 ---p 000c6000 08:03 5243840                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_pjc.so
+7f99abcbb000-7f99abcc9000 rw-p 000c5000 08:03 5243840                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_pjc.so
+7f99abcc9000-7f99abcca000 rw-p 00000000 00:00 0 
+7f99abcca000-7f99abcd1000 r-xp 00000000 08:03 5244066                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_cpt_hdb.so
+7f99abcd1000-7f99abed1000 ---p 00007000 08:03 5244066                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_cpt_hdb.so
+7f99abed1000-7f99abed2000 rw-p 00007000 08:03 5244066                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_cpt_hdb.so
+7f99abed2000-7f99abf78000 r-xp 00000000 08:03 5244912                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qhd.so
+7f99abf78000-7f99ac177000 ---p 000a6000 08:03 5244912                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qhd.so
+7f99ac177000-7f99ac17d000 rw-p 000a5000 08:03 5244912                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qhd.so
+7f99ac17d000-7f99ac190000 r-xp 00000000 08:03 5243823                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libgcl_qjson.so
+7f99ac190000-7f99ac38f000 ---p 00013000 08:03 5243823                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libgcl_qjson.so
+7f99ac38f000-7f99ac390000 rw-p 00012000 08:03 5243823                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libgcl_qjson.so
+7f99ac390000-7f99ac391000 r-xp 00000000 08:03 1713185                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4800.1
+7f99ac391000-7f99ac590000 ---p 00001000 08:03 1713185                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4800.1
+7f99ac590000-7f99ac591000 r--p 00000000 08:03 1713185                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4800.1
+7f99ac591000-7f99ac592000 rw-p 00001000 08:03 1713185                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.4800.1
+7f99ac592000-7f99ac897000 r-xp 00000000 08:03 5245022                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libQtCore.so
+7f99ac897000-7f99aca96000 ---p 00305000 08:03 5245022                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libQtCore.so
+7f99aca96000-7f99acaa7000 rw-p 00304000 08:03 5245022                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libQtCore.so
+7f99acaa7000-7f99acbe5000 r-xp 00000000 08:03 5244902                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libperiph_fpp.so
+7f99acbe5000-7f99acde5000 ---p 0013e000 08:03 5244902                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libperiph_fpp.so
+7f99acde5000-7f99acdea000 rw-p 0013e000 08:03 5244902                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libperiph_fpp.so
+7f99acdea000-7f99acdeb000 rw-p 00000000 00:00 0 
+7f99acdeb000-7f99ace01000 r-xp 00000000 08:03 5244464                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_lampas.so
+7f99ace01000-7f99ad001000 ---p 00016000 08:03 5244464                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_lampas.so
+7f99ad001000-7f99ad002000 rw-p 00016000 08:03 5244464                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_lampas.so
+7f99ad002000-7f99ad0a6000 r-xp 00000000 08:03 5244531                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_ares.so
+7f99ad0a6000-7f99ad2a5000 ---p 000a4000 08:03 5244531                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_ares.so
+7f99ad2a5000-7f99ad2ab000 rw-p 000a3000 08:03 5244531                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_ares.so
+7f99ad2ab000-7f99ad376000 r-xp 00000000 08:03 5243398                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_rapid.so
+7f99ad376000-7f99ad576000 ---p 000cb000 08:03 5243398                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_rapid.so
+7f99ad576000-7f99ad579000 rw-p 000cb000 08:03 5243398                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_rapid.so
+7f99ad579000-7f99ada13000 r-xp 00000000 08:03 5244858                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_cdb.so
+7f99ada13000-7f99adc12000 ---p 0049a000 08:03 5244858                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_cdb.so
+7f99adc12000-7f99adc2f000 rw-p 00499000 08:03 5244858                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_cdb.so
+7f99adc2f000-7f99adc43000 rw-p 00000000 00:00 0 
+7f99adc43000-7f99adc5d000 r-xp 00000000 08:03 5244512                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_cfg.so
+7f99adc5d000-7f99ade5c000 ---p 0001a000 08:03 5244512                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_cfg.so
+7f99ade5c000-7f99ade5d000 rw-p 00019000 08:03 5244512                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b2_cfg.so
+7f99ade5d000-7f99ade5e000 rw-p 00000000 00:00 0 
+7f99ade5e000-7f99ade82000 r-xp 00000000 08:03 5244085                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_idb.so
+7f99ade82000-7f99ae081000 ---p 00024000 08:03 5244085                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_idb.so
+7f99ae081000-7f99ae084000 rw-p 00023000 08:03 5244085                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_idb.so
+7f99ae084000-7f99ae085000 rw-p 00000000 00:00 0 
+7f99ae085000-7f99ae087000 r-xp 00000000 08:03 5244803                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_qtl_string_match.so
+7f99ae087000-7f99ae286000 ---p 00002000 08:03 5244803                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_qtl_string_match.so
+7f99ae286000-7f99ae287000 rw-p 00001000 08:03 5244803                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_qtl_string_match.so
+7f99ae287000-7f99ae28f000 r-xp 00000000 08:03 5244635                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ipc.so
+7f99ae28f000-7f99ae48e000 ---p 00008000 08:03 5244635                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ipc.so
+7f99ae48e000-7f99ae48f000 rw-p 00007000 08:03 5244635                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ipc.so
+7f99ae48f000-7f99ae4c6000 r-xp 00000000 08:03 5243545                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_mpp.so
+7f99ae4c6000-7f99ae6c5000 ---p 00037000 08:03 5243545                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_mpp.so
+7f99ae6c5000-7f99ae6c7000 rw-p 00036000 08:03 5243545                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_mpp.so
+7f99ae6c7000-7f99ae6f7000 r-xp 00000000 08:03 5244898                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_logdb.so
+7f99ae6f7000-7f99ae8f7000 ---p 00030000 08:03 5244898                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_logdb.so
+7f99ae8f7000-7f99ae8f9000 rw-p 00030000 08:03 5244898                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_logdb.so
+7f99ae8f9000-7f99ae904000 rw-p 00000000 00:00 0 
+7f99ae904000-7f99ae920000 r-xp 00000000 08:03 5244593                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_rutil.so
+7f99ae920000-7f99aeb20000 ---p 0001c000 08:03 5244593                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_rutil.so
+7f99aeb20000-7f99aeb21000 rw-p 0001c000 08:03 5244593                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_rutil.so
+7f99aeb21000-7f99aeba1000 r-xp 00000000 08:03 5243356                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_atmx.so
+7f99aeba1000-7f99aeda0000 ---p 00080000 08:03 5243356                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_atmx.so
+7f99aeda0000-7f99aeda4000 rw-p 0007f000 08:03 5243356                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_atmx.so
+7f99aeda4000-7f99af038000 r-xp 00000000 08:03 5244650                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b.so
+7f99af038000-7f99af238000 ---p 00294000 08:03 5244650                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b.so
+7f99af238000-7f99af245000 rw-p 00294000 08:03 5244650                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b.so
+7f99af245000-7f99c05e2000 r-xp 00000000 08:03 5244519                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_tinfo.so
+7f99c05e2000-7f99c07e2000 ---p 1139d000 08:03 5244519                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_tinfo.so
+7f99c07e2000-7f99c227d000 rw-p 1139d000 08:03 5244519                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_tinfo.so
+7f99c227d000-7f99c227f000 rw-p 00000000 00:00 0 
+7f99c227f000-7f99c22bd000 r-xp 00000000 08:03 5244880                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_b2b.so
+7f99c22bd000-7f99c24bd000 ---p 0003e000 08:03 5244880                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_b2b.so
+7f99c24bd000-7f99c24c6000 rw-p 0003e000 08:03 5244880                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_b2b.so
+7f99c24c6000-7f99c24ec000 r-xp 00000000 08:03 5243789                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qexe.so
+7f99c24ec000-7f99c26eb000 ---p 00026000 08:03 5243789                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qexe.so
+7f99c26eb000-7f99c26ee000 rw-p 00025000 08:03 5243789                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qexe.so
+7f99c26ee000-7f99c2717000 r-xp 00000000 08:03 5244433                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_cloud.so
+7f99c2717000-7f99c2917000 ---p 00029000 08:03 5244433                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_cloud.so
+7f99c2917000-7f99c2919000 rw-p 00029000 08:03 5244433                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_cloud.so
+7f99c2919000-7f99c292e000 r-xp 00000000 08:03 5243390                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_curl.so
+7f99c292e000-7f99c2b2d000 ---p 00015000 08:03 5243390                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_curl.so
+7f99c2b2d000-7f99c2b2e000 rw-p 00014000 08:03 5243390                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_curl.so
+7f99c2b2e000-7f99c2b44000 r-xp 00000000 08:03 5244208                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_bat.so
+7f99c2b44000-7f99c2d43000 ---p 00016000 08:03 5244208                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_bat.so
+7f99c2d43000-7f99c2d45000 rw-p 00015000 08:03 5244208                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_bat.so
+7f99c2d45000-7f99c2d7e000 r-xp 00000000 08:03 5244362                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_tim_rc.so
+7f99c2d7e000-7f99c2f7e000 ---p 00039000 08:03 5244362                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_tim_rc.so
+7f99c2f7e000-7f99c2f80000 rw-p 00039000 08:03 5244362                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_tim_rc.so
+7f99c2f80000-7f99c2f8b000 rw-p 00000000 00:00 0 
+7f99c2f8b000-7f99c3a6e000 r-xp 00000000 08:03 5243307                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cut.so
+7f99c3a6e000-7f99c3c6e000 ---p 00ae3000 08:03 5243307                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cut.so
+7f99c3c6e000-7f99c3c9f000 rw-p 00ae3000 08:03 5243307                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cut.so
+7f99c3c9f000-7f99c3cb2000 rw-p 00000000 00:00 0 
+7f99c3cb2000-7f99c3cb7000 r-xp 00000000 08:03 5244012                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qcu_tb2.so
+7f99c3cb7000-7f99c3eb7000 ---p 00005000 08:03 5244012                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qcu_tb2.so
+7f99c3eb7000-7f99c3eb8000 rw-p 00005000 08:03 5244012                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qcu_tb2.so
+7f99c3eb8000-7f99c3ee5000 r-xp 00000000 08:03 5244391                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsynth_bdd.so
+7f99c3ee5000-7f99c40e4000 ---p 0002d000 08:03 5244391                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsynth_bdd.so
+7f99c40e4000-7f99c40e6000 rw-p 0002c000 08:03 5244391                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsynth_bdd.so
+7f99c40e6000-7f99c4186000 r-xp 00000000 08:03 5243991                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcbx_util.so
+7f99c4186000-7f99c4386000 ---p 000a0000 08:03 5243991                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcbx_util.so
+7f99c4386000-7f99c4387000 rw-p 000a0000 08:03 5243991                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcbx_util.so
+7f99c4387000-7f99c4434000 r-xp 00000000 08:03 5243739                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libmega_mfam.so
+7f99c4434000-7f99c4633000 ---p 000ad000 08:03 5243739                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libmega_mfam.so
+7f99c4633000-7f99c4638000 rw-p 000ac000 08:03 5243739                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libmega_mfam.so
+7f99c4638000-7f99c463c000 rw-p 00000000 00:00 0 
+7f99c463c000-7f99c4640000 r-xp 00000000 08:03 5244401                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libmega_stl.so
+7f99c4640000-7f99c4840000 ---p 00004000 08:03 5244401                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libmega_stl.so
+7f99c4840000-7f99c4841000 rw-p 00004000 08:03 5244401                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libmega_stl.so
+7f99c4841000-7f99c4847000 r-xp 00000000 08:03 5244661                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_tb2.so
+7f99c4847000-7f99c4a46000 ---p 00006000 08:03 5244661                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_tb2.so
+7f99c4a46000-7f99c4a47000 rw-p 00005000 08:03 5244661                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_tb2.so
+7f99c4a47000-7f99c4a54000 r-xp 00000000 08:03 5243945                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_hinf.so
+7f99c4a54000-7f99c4c54000 ---p 0000d000 08:03 5243945                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_hinf.so
+7f99c4c54000-7f99c4c56000 rw-p 0000d000 08:03 5243945                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_hinf.so
+7f99c4c56000-7f99c4d9e000 r-xp 00000000 08:03 5243740                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_constra.so
+7f99c4d9e000-7f99c4f9e000 ---p 00148000 08:03 5243740                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_constra.so
+7f99c4f9e000-7f99c4fa7000 rw-p 00148000 08:03 5243740                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_constra.so
+7f99c4fa7000-7f99c4fa8000 rw-p 00000000 00:00 0 
+7f99c4fa8000-7f99c4fee000 r-xp 00000000 08:03 5244706                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_mgr.so
+7f99c4fee000-7f99c51ed000 ---p 00046000 08:03 5244706                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_mgr.so
+7f99c51ed000-7f99c51f0000 rw-p 00045000 08:03 5244706                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_mgr.so
+7f99c51f0000-7f99c51f1000 rw-p 00000000 00:00 0 
+7f99c51f1000-7f99c5235000 r-xp 00000000 08:03 5244507                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_ibr.so
+7f99c5235000-7f99c5434000 ---p 00044000 08:03 5244507                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_ibr.so
+7f99c5434000-7f99c543b000 rw-p 00043000 08:03 5244507                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_ibr.so
+7f99c543b000-7f99c544f000 r-xp 00000000 08:03 5244035                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b_bcm.so
+7f99c544f000-7f99c564e000 ---p 00014000 08:03 5244035                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b_bcm.so
+7f99c564e000-7f99c5650000 rw-p 00013000 08:03 5244035                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b_bcm.so
+7f99c5650000-7f99c5686000 r-xp 00000000 08:03 5244672                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b_cfg.so
+7f99c5686000-7f99c5885000 ---p 00036000 08:03 5244672                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b_cfg.so
+7f99c5885000-7f99c588a000 rw-p 00035000 08:03 5244672                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_u2b_cfg.so
+7f99c588a000-7f99c588c000 rw-p 00000000 00:00 0 
+7f99c588c000-7f99c5927000 r-xp 00000000 08:03 5244152                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_re.so
+7f99c5927000-7f99c5b26000 ---p 0009b000 08:03 5244152                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_re.so
+7f99c5b26000-7f99c5b2e000 rw-p 0009a000 08:03 5244152                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_re.so
+7f99c5b2e000-7f99c5b30000 rw-p 00000000 00:00 0 
+7f99c5b30000-7f99c5b5f000 r-xp 00000000 08:03 5243816                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_a2c.so
+7f99c5b5f000-7f99c5d5f000 ---p 0002f000 08:03 5243816                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_a2c.so
+7f99c5d5f000-7f99c5d61000 rw-p 0002f000 08:03 5243816                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_a2c.so
+7f99c5d61000-7f99c5d76000 r-xp 00000000 08:03 5243589                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_msf.so
+7f99c5d76000-7f99c5f75000 ---p 00015000 08:03 5243589                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_msf.so
+7f99c5f75000-7f99c5f77000 rw-p 00014000 08:03 5243589                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_msf.so
+7f99c5f77000-7f99c5fb1000 r-xp 00000000 08:03 5243919                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cut_dev.so
+7f99c5fb1000-7f99c61b0000 ---p 0003a000 08:03 5243919                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cut_dev.so
+7f99c61b0000-7f99c61b2000 rw-p 00039000 08:03 5243919                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cut_dev.so
+7f99c61b2000-7f99c624c000 r-xp 00000000 08:03 5244153                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dbcm.so
+7f99c624c000-7f99c644b000 ---p 0009a000 08:03 5244153                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dbcm.so
+7f99c644b000-7f99c6450000 rw-p 00099000 08:03 5244153                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dbcm.so
+7f99c6450000-7f99c6452000 rw-p 00000000 00:00 0 
+7f99c6452000-7f99c647a000 r-xp 00000000 08:03 5244726                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_ihc.so
+7f99c647a000-7f99c6679000 ---p 00028000 08:03 5244726                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_ihc.so
+7f99c6679000-7f99c667a000 rw-p 00027000 08:03 5244726                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_ihc.so
+7f99c667a000-7f99c667b000 rw-p 00000000 00:00 0 
+7f99c667b000-7f99c6815000 r-xp 00000000 08:03 5244599                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dygr_qdl.so
+7f99c6815000-7f99c6a14000 ---p 0019a000 08:03 5244599                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dygr_qdl.so
+7f99c6a14000-7f99c6a57000 rw-p 00199000 08:03 5244599                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dygr_qdl.so
+7f99c6a57000-7f99c6d41000 r-xp 00000000 08:03 5244962                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libmxlqdl.so
+7f99c6d41000-7f99c6f40000 ---p 002ea000 08:03 5244962                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libmxlqdl.so
+7f99c6f40000-7f99c6f59000 rw-p 002e9000 08:03 5244962                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libmxlqdl.so
+7f99c6f59000-7f99c6f5b000 rw-p 00000000 00:00 0 
+7f99c6f5b000-7f99c7051000 r-xp 00000000 08:03 5244974                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libprotobuf.so.8.0.0
+7f99c7051000-7f99c7251000 ---p 000f6000 08:03 5244974                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libprotobuf.so.8.0.0
+7f99c7251000-7f99c7257000 rw-p 000f6000 08:03 5244974                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libprotobuf.so.8.0.0
+7f99c7257000-7f99c729b000 r-xp 00000000 08:03 5243975                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_generic.so
+7f99c729b000-7f99c749b000 ---p 00044000 08:03 5243975                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_generic.so
+7f99c749b000-7f99c74a0000 rw-p 00044000 08:03 5243975                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_generic.so
+7f99c74a0000-7f99c7de4000 r-xp 00000000 08:03 5244554                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_hssi.so
+7f99c7de4000-7f99c7fe3000 ---p 00944000 08:03 5244554                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_hssi.so
+7f99c7fe3000-7f99c7ffe000 rw-p 00943000 08:03 5244554                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_hssi.so
+7f99c7ffe000-7f99c8000000 rw-p 00000000 00:00 0 
+7f99c8000000-7f99c9c70000 rw-p 00000000 00:00 0 
+7f99c9c70000-7f99cc000000 ---p 00000000 00:00 0 
+7f99cc073000-7f99cc075000 r-xp 00000000 08:03 5243631                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal.so
+7f99cc075000-7f99cc274000 ---p 00002000 08:03 5243631                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal.so
+7f99cc274000-7f99cc275000 rw-p 00001000 08:03 5243631                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal.so
+7f99cc275000-7f99cc2a7000 r-xp 00000000 08:03 5244727                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_emif.so
+7f99cc2a7000-7f99cc4a6000 ---p 00032000 08:03 5244727                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_emif.so
+7f99cc4a6000-7f99cc4a8000 rw-p 00031000 08:03 5244727                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_emif.so
+7f99cc4a8000-7f99cc507000 r-xp 00000000 08:03 5243743                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_lvds.so
+7f99cc507000-7f99cc707000 ---p 0005f000 08:03 5243743                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_lvds.so
+7f99cc707000-7f99cc709000 rw-p 0005f000 08:03 5243743                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_lvds.so
+7f99cc709000-7f99cc75d000 r-xp 00000000 08:03 5243438                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_nf_hssi.so
+7f99cc75d000-7f99cc95c000 ---p 00054000 08:03 5243438                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_nf_hssi.so
+7f99cc95c000-7f99cc95e000 rw-p 00053000 08:03 5243438                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_nf_hssi.so
+7f99cc95e000-7f99cca37000 r-xp 00000000 08:03 5243874                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_cv_pll.so
+7f99cca37000-7f99ccc37000 ---p 000d9000 08:03 5243874                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_cv_pll.so
+7f99ccc37000-7f99ccc3a000 rw-p 000d9000 08:03 5243874                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_cv_pll.so
+7f99ccc3a000-7f99ccd24000 r-xp 00000000 08:03 5243814                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_pll.so
+7f99ccd24000-7f99ccf24000 ---p 000ea000 08:03 5243814                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_pll.so
+7f99ccf24000-7f99ccf27000 rw-p 000ea000 08:03 5243814                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_av_pll.so
+7f99ccf27000-7f99ce00e000 r-xp 00000000 08:03 5244804                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_generic.so
+7f99ce00e000-7f99ce20d000 ---p 010e7000 08:03 5244804                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_generic.so
+7f99ce20d000-7f99ce23c000 rw-p 010e6000 08:03 5244804                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_generic.so
+7f99ce23c000-7f99ce240000 rw-p 00000000 00:00 0 
+7f99ce240000-7f99ce249000 r-xp 00000000 08:03 5244161                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_util.so
+7f99ce249000-7f99ce448000 ---p 00009000 08:03 5244161                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_util.so
+7f99ce448000-7f99ce449000 rw-p 00008000 08:03 5244161                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cal_util.so
+7f99ce449000-7f99ce531000 r-xp 00000000 08:03 5243228                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_nlspc.so
+7f99ce531000-7f99ce731000 ---p 000e8000 08:03 5243228                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_nlspc.so
+7f99ce731000-7f99ce736000 rw-p 000e8000 08:03 5243228                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_nlspc.so
+7f99ce736000-7f99ce73b000 rw-p 00000000 00:00 0 
+7f99ce73b000-7f99ce753000 r-xp 00000000 08:03 5243900                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_superlu.so
+7f99ce753000-7f99ce953000 ---p 00018000 08:03 5243900                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_superlu.so
+7f99ce953000-7f99ce954000 rw-p 00018000 08:03 5243900                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_superlu.so
+7f99ce954000-7f99ce95b000 r-xp 00000000 08:03 5244827                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_blas.so
+7f99ce95b000-7f99ceb5a000 ---p 00007000 08:03 5244827                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_blas.so
+7f99ceb5a000-7f99ceb5b000 rw-p 00006000 08:03 5244827                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_blas.so
+7f99ceb5b000-7f99cebae000 r-xp 00000000 08:03 5243999                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_metis.so
+7f99cebae000-7f99cedad000 ---p 00053000 08:03 5243999                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_metis.so
+7f99cedad000-7f99cedae000 rw-p 00052000 08:03 5243999                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtsm_metis.so
+7f99cedae000-7f99cefae000 rw-p 00000000 00:00 0 
+7f99cefae000-7f99cf1ae000 rw-p 00000000 00:00 0 
+7f99cf1ae000-7f99cf3ae000 rw-p 00000000 00:00 0 
+7f99cf3ae000-7f99cf725000 r-xp 00000000 08:03 5250646                    /home/ngocsang/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so
+7f99cf725000-7f99cf924000 ---p 00377000 08:03 5250646                    /home/ngocsang/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so
+7f99cf924000-7f99cf94e000 rw-p 00376000 08:03 5250646                    /home/ngocsang/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so
+7f99cf94e000-7f99cf998000 rw-p 00000000 00:00 0 
+7f99cf998000-7f99cf9a0000 r-xp 00000000 08:03 5245883                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libmanagement.so
+7f99cf9a0000-7f99cfba0000 ---p 00008000 08:03 5245883                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libmanagement.so
+7f99cfba0000-7f99cfba1000 rw-p 00008000 08:03 5245883                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libmanagement.so
+7f99cfba1000-7f99cfda1000 rw-p 00000000 00:00 0 
+7f99cfda1000-7f99cfe4b000 r-xp 00000000 08:03 5244760                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libqcl_pll.so
+7f99cfe4b000-7f99d004b000 ---p 000aa000 08:03 5244760                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libqcl_pll.so
+7f99d004b000-7f99d004e000 rw-p 000aa000 08:03 5244760                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libqcl_pll.so
+7f99d004e000-7f99d0055000 r-xp 00000000 08:03 5244951                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_rbc_util.so
+7f99d0055000-7f99d0255000 ---p 00007000 08:03 5244951                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_rbc_util.so
+7f99d0255000-7f99d0256000 rw-p 00007000 08:03 5244951                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_rbc_util.so
+7f99d0256000-7f99d0284000 r-xp 00000000 08:03 5244373                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_cga.so
+7f99d0284000-7f99d0484000 ---p 0002e000 08:03 5244373                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_cga.so
+7f99d0484000-7f99d0487000 rw-p 0002e000 08:03 5244373                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_cga.so
+7f99d0487000-7f99d051c000 rw-p 00000000 00:00 0 
+7f99d051c000-7f99d0541000 r-xp 00000000 08:03 5244355                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_factory.so
+7f99d0541000-7f99d0741000 ---p 00025000 08:03 5244355                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_factory.so
+7f99d0741000-7f99d0743000 rw-p 00025000 08:03 5244355                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_factory.so
+7f99d0743000-7f99d07cc000 r-xp 00000000 08:03 5244313                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_syn.so
+7f99d07cc000-7f99d09cb000 ---p 00089000 08:03 5244313                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_syn.so
+7f99d09cb000-7f99d09e5000 rw-p 00088000 08:03 5244313                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_syn.so
+7f99d09e5000-7f99d0d43000 r-xp 00000000 08:03 5244041                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_cyclonev.so
+7f99d0d43000-7f99d0f43000 ---p 0035e000 08:03 5244041                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_cyclonev.so
+7f99d0f43000-7f99d0fd8000 rw-p 0035e000 08:03 5244041                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_cyclonev.so
+7f99d0fd8000-7f99d0fda000 rw-p 00000000 00:00 0 
+7f99d0fda000-7f99d1c24000 r-xp 00000000 08:03 5243308                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_arriav.so
+7f99d1c24000-7f99d1e23000 ---p 00c4a000 08:03 5243308                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_arriav.so
+7f99d1e23000-7f99d20c9000 rw-p 00c49000 08:03 5243308                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_arriav.so
+7f99d20c9000-7f99d20d1000 rw-p 00000000 00:00 0 
+7f99d20d1000-7f99d257b000 r-xp 00000000 08:03 5244165                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_nadder.so
+7f99d257b000-7f99d277a000 ---p 004aa000 08:03 5244165                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_nadder.so
+7f99d277a000-7f99d288c000 rw-p 004a9000 08:03 5244165                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_nadder.so
+7f99d288c000-7f99d288f000 rw-p 00000000 00:00 0 
+7f99d288f000-7f99d2bcf000 r-xp 00000000 08:03 5244745                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_nightfury.so
+7f99d2bcf000-7f99d2dce000 ---p 00340000 08:03 5244745                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_nightfury.so
+7f99d2dce000-7f99d2e81000 rw-p 0033f000 08:03 5244745                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_nightfury.so
+7f99d2e81000-7f99d2e83000 rw-p 00000000 00:00 0 
+7f99d2e83000-7f99d2ecb000 r-xp 00000000 08:03 5243533                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_dynamic.so
+7f99d2ecb000-7f99d30cb000 ---p 00048000 08:03 5243533                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_dynamic.so
+7f99d30cb000-7f99d30d0000 rw-p 00048000 08:03 5243533                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_dynamic.so
+7f99d30d0000-7f99d3a54000 r-xp 00000000 08:03 5243668                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_stratixv.so
+7f99d3a54000-7f99d3c53000 ---p 00984000 08:03 5243668                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_stratixv.so
+7f99d3c53000-7f99d3e4c000 rw-p 00983000 08:03 5243668                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_stratixv.so
+7f99d3e4c000-7f99d3e52000 rw-p 00000000 00:00 0 
+7f99d3e52000-7f99d40f0000 r-xp 00000000 08:03 5243360                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_fusion.so
+7f99d40f0000-7f99d42ef000 ---p 0029e000 08:03 5243360                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_fusion.so
+7f99d42ef000-7f99d4389000 rw-p 0029d000 08:03 5243360                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_fusion.so
+7f99d4389000-7f99d438b000 rw-p 00000000 00:00 0 
+7f99d438b000-7f99d4681000 r-xp 00000000 08:03 5243916                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_cuda.so
+7f99d4681000-7f99d4881000 ---p 002f6000 08:03 5243916                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_cuda.so
+7f99d4881000-7f99d4930000 rw-p 002f6000 08:03 5243916                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_cuda.so
+7f99d4930000-7f99d4932000 rw-p 00000000 00:00 0 
+7f99d4932000-7f99d4d02000 r-xp 00000000 08:03 5244785                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_titan.so
+7f99d4d02000-7f99d4f02000 ---p 003d0000 08:03 5244785                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_titan.so
+7f99d4f02000-7f99d4fd6000 rw-p 003d0000 08:03 5244785                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_titan.so
+7f99d4fd6000-7f99d4fd8000 rw-p 00000000 00:00 0 
+7f99d4fd8000-7f99d528e000 r-xp 00000000 08:03 5243653                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_tgx.so
+7f99d528e000-7f99d548e000 ---p 002b6000 08:03 5243653                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_tgx.so
+7f99d548e000-7f99d5520000 rw-p 002b6000 08:03 5243653                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_tgx.so
+7f99d5520000-7f99d5522000 rw-p 00000000 00:00 0 
+7f99d5522000-7f99d561c000 r-xp 00000000 08:03 5244692                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_stingray.so
+7f99d561c000-7f99d581c000 ---p 000fa000 08:03 5244692                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_stingray.so
+7f99d581c000-7f99d584f000 rw-p 000fa000 08:03 5244692                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_stingray.so
+7f99d584f000-7f99d5f02000 r-xp 00000000 08:03 5243381                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_hcx.so
+7f99d5f02000-7f99d6102000 ---p 006b3000 08:03 5243381                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_hcx.so
+7f99d6102000-7f99d62a0000 rw-p 006b3000 08:03 5243381                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_hcx.so
+7f99d62a0000-7f99d62a5000 rw-p 00000000 00:00 0 
+7f99d62a5000-7f99d6441000 r-xp 00000000 08:03 5243456                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_ygr.so
+7f99d6441000-7f99d6641000 ---p 0019c000 08:03 5243456                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_ygr.so
+7f99d6641000-7f99d6695000 rw-p 0019c000 08:03 5243456                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_ygr.so
+7f99d6695000-7f99d6696000 rw-p 00000000 00:00 0 
+7f99d6696000-7f99d6957000 r-xp 00000000 08:03 5244437                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_arm.so
+7f99d6957000-7f99d6b57000 ---p 002c1000 08:03 5244437                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_arm.so
+7f99d6b57000-7f99d6bf2000 rw-p 002c1000 08:03 5244437                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_arm.so
+7f99d6bf2000-7f99d6bf3000 rw-p 00000000 00:00 0 
+7f99d6bf3000-7f99d6d57000 r-xp 00000000 08:03 5244947                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom.so
+7f99d6d57000-7f99d6f56000 ---p 00164000 08:03 5244947                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom.so
+7f99d6f56000-7f99d6f70000 rw-p 00163000 08:03 5244947                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom.so
+7f99d6f70000-7f99d6f71000 rw-p 00000000 00:00 0 
+7f99d6f71000-7f99d6f7e000 r-xp 00000000 08:03 5244223                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dloc.so
+7f99d6f7e000-7f99d717e000 ---p 0000d000 08:03 5244223                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dloc.so
+7f99d717e000-7f99d717f000 rw-p 0000d000 08:03 5244223                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dloc.so
+7f99d717f000-7f99d7367000 r-xp 00000000 08:03 5243482                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_db.so
+7f99d7367000-7f99d7567000 ---p 001e8000 08:03 5243482                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_db.so
+7f99d7567000-7f99d75f3000 rw-p 001e8000 08:03 5243482                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_db.so
+7f99d75f3000-7f99d761b000 rw-p 00000000 00:00 0 
+7f99d761b000-7f99d7b06000 r-xp 00000000 08:03 5244171                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_sgate.so
+7f99d7b06000-7f99d7d06000 ---p 004eb000 08:03 5244171                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_sgate.so
+7f99d7d06000-7f99d7d20000 rw-p 004eb000 08:03 5244171                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_sgate.so
+7f99d7d20000-7f99d7d26000 rw-p 00000000 00:00 0 
+7f99d7d26000-7f99d7daf000 r-xp 00000000 08:03 5244411                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_idu.so
+7f99d7daf000-7f99d7fae000 ---p 00089000 08:03 5244411                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_idu.so
+7f99d7fae000-7f99d7fb3000 rw-p 00088000 08:03 5244411                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_idu.so
+7f99d7fb3000-7f99d809b000 r-xp 00000000 08:03 5244430                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_rdb.so
+7f99d809b000-7f99d829b000 ---p 000e8000 08:03 5244430                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_rdb.so
+7f99d829b000-7f99d82a7000 rw-p 000e8000 08:03 5244430                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_rdb.so
+7f99d82a7000-7f99d82aa000 rw-p 00000000 00:00 0 
+7f99d82aa000-7f99d82b0000 r-xp 00000000 08:03 5243365                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_rstr.so
+7f99d82b0000-7f99d84af000 ---p 00006000 08:03 5243365                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_rstr.so
+7f99d84af000-7f99d84b0000 rw-p 00005000 08:03 5243365                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_rstr.so
+7f99d84b0000-7f99d84bf000 r-xp 00000000 08:03 5244092                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_dbmui.so
+7f99d84bf000-7f99d86be000 ---p 0000f000 08:03 5244092                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_dbmui.so
+7f99d86be000-7f99d86c0000 rw-p 0000e000 08:03 5244092                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_dbmui.so
+7f99d86c0000-7f99d86ce000 r-xp 00000000 08:03 5244631                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_flow_util.so
+7f99d86ce000-7f99d88ce000 ---p 0000e000 08:03 5244631                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_flow_util.so
+7f99d88ce000-7f99d88cf000 rw-p 0000e000 08:03 5244631                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_flow_util.so
+7f99d88cf000-7f99d894c000 r-xp 00000000 08:03 5244903                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_kpt.so
+7f99d894c000-7f99d8b4c000 ---p 0007d000 08:03 5244903                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_kpt.so
+7f99d8b4c000-7f99d8b51000 rw-p 0007d000 08:03 5244903                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_kpt.so
+7f99d8b51000-7f99d8b8e000 r-xp 00000000 08:03 5244169                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libqcl_pllc.so
+7f99d8b8e000-7f99d8d8d000 ---p 0003d000 08:03 5244169                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libqcl_pllc.so
+7f99d8d8d000-7f99d8d8f000 rw-p 0003c000 08:03 5244169                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libqcl_pllc.so
+7f99d8d8f000-7f99d8df2000 r-xp 00000000 08:03 5243674                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb.so
+7f99d8df2000-7f99d8ff1000 ---p 00063000 08:03 5243674                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb.so
+7f99d8ff1000-7f99d8ff6000 rw-p 00062000 08:03 5243674                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb.so
+7f99d8ff6000-7f99d8ff7000 rw-p 00000000 00:00 0 
+7f99d8ff7000-7f99d8ffd000 r-xp 00000000 08:03 5244439                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_hut.so
+7f99d8ffd000-7f99d91fc000 ---p 00006000 08:03 5244439                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_hut.so
+7f99d91fc000-7f99d91fd000 rw-p 00005000 08:03 5244439                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_hut.so
+7f99d91fd000-7f99d9222000 r-xp 00000000 08:03 5244636                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_mio.so
+7f99d9222000-7f99d9421000 ---p 00025000 08:03 5244636                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_mio.so
+7f99d9421000-7f99d9423000 rw-p 00024000 08:03 5244636                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_mio.so
+7f99d9423000-7f99d9424000 r-xp 00000000 08:03 5244499                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qcu_facade.so
+7f99d9424000-7f99d9623000 ---p 00001000 08:03 5244499                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qcu_facade.so
+7f99d9623000-7f99d9624000 rw-p 00000000 08:03 5244499                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libcomp_qcu_facade.so
+7f99d9624000-7f99d9627000 r-xp 00000000 08:03 5243978                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_autil.so
+7f99d9627000-7f99d9826000 ---p 00003000 08:03 5243978                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_autil.so
+7f99d9826000-7f99d9827000 rw-p 00002000 08:03 5243978                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_autil.so
+7f99d9827000-7f99d99fa000 r-xp 00000000 08:03 5244238                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_hdb.so
+7f99d99fa000-7f99d9bfa000 ---p 001d3000 08:03 5244238                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_hdb.so
+7f99d9bfa000-7f99d9c0d000 rw-p 001d3000 08:03 5244238                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_hdb.so
+7f99d9c0d000-7f99d9c14000 rw-p 00000000 00:00 0 
+7f99d9c14000-7f99d9c77000 r-xp 00000000 08:03 5243703                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_qdb.so
+7f99d9c77000-7f99d9e77000 ---p 00063000 08:03 5243703                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_qdb.so
+7f99d9e77000-7f99d9e7d000 rw-p 00063000 08:03 5243703                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_qdb.so
+7f99d9e7d000-7f99d9e8f000 r-xp 00000000 08:03 5243795                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_afm.so
+7f99d9e8f000-7f99da08e000 ---p 00012000 08:03 5243795                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_afm.so
+7f99da08e000-7f99da090000 rw-p 00011000 08:03 5243795                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_afm.so
+7f99da090000-7f99da09d000 r-xp 00000000 08:03 5244751                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_dbm.so
+7f99da09d000-7f99da29d000 ---p 0000d000 08:03 5244751                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_dbm.so
+7f99da29d000-7f99da29e000 rw-p 0000d000 08:03 5244751                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_dbm.so
+7f99da29e000-7f99da4b8000 r-xp 00000000 08:03 5244484                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_acf.so
+7f99da4b8000-7f99da6b7000 ---p 0021a000 08:03 5244484                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_acf.so
+7f99da6b7000-7f99da72c000 rw-p 00219000 08:03 5244484                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_acf.so
+7f99da72c000-7f99da731000 r-xp 00000000 08:03 5243790                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ntfq.so
+7f99da731000-7f99da930000 ---p 00005000 08:03 5243790                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ntfq.so
+7f99da930000-7f99da931000 rw-p 00004000 08:03 5243790                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ntfq.so
+7f99da931000-7f99da935000 r-xp 00000000 08:03 5244777                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ntf.so
+7f99da935000-7f99dab34000 ---p 00004000 08:03 5244777                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ntf.so
+7f99dab34000-7f99dab35000 rw-p 00003000 08:03 5244777                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ntf.so
+7f99dab35000-7f99dab3d000 r-xp 00000000 08:03 5244682                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_cksum.so
+7f99dab3d000-7f99dad3c000 ---p 00008000 08:03 5244682                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_cksum.so
+7f99dad3c000-7f99dad3d000 rw-p 00007000 08:03 5244682                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_cksum.so
+7f99dad3d000-7f99dad5f000 r-xp 00000000 08:03 5243558                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dmgr.so
+7f99dad5f000-7f99daf5f000 ---p 00022000 08:03 5243558                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dmgr.so
+7f99daf5f000-7f99daf60000 rw-p 00022000 08:03 5243558                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dmgr.so
+7f99daf60000-7f99dafd4000 r-xp 00000000 08:03 5243856                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dpow.so
+7f99dafd4000-7f99db1d4000 ---p 00074000 08:03 5243856                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dpow.so
+7f99db1d4000-7f99db1d7000 rw-p 00074000 08:03 5243856                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dpow.so
+7f99db1d7000-7f99db1d8000 rw-p 00000000 00:00 0 
+7f99db1d8000-7f99db240000 r-xp 00000000 08:03 5243768                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dtm.so
+7f99db240000-7f99db440000 ---p 00068000 08:03 5243768                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dtm.so
+7f99db440000-7f99db445000 rw-p 00068000 08:03 5243768                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dtm.so
+7f99db445000-7f99db446000 rw-p 00000000 00:00 0 
+7f99db446000-7f99db822000 r-xp 00000000 08:03 5244139                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dygr.so
+7f99db822000-7f99dba21000 ---p 003dc000 08:03 5244139                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dygr.so
+7f99dba21000-7f99dba6a000 rw-p 003db000 08:03 5244139                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dygr.so
+7f99dba6a000-7f99dba70000 rw-p 00000000 00:00 0 
+7f99dba70000-7f99dbaae000 r-xp 00000000 08:03 5244212                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dmig.so
+7f99dbaae000-7f99dbcad000 ---p 0003e000 08:03 5244212                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dmig.so
+7f99dbcad000-7f99dbcaf000 rw-p 0003d000 08:03 5244212                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dmig.so
+7f99dbcaf000-7f99dbcb0000 rw-p 00000000 00:00 0 
+7f99dbcb0000-7f99dbe01000 r-xp 00000000 08:03 5244275                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dev.so
+7f99dbe01000-7f99dc001000 ---p 00151000 08:03 5244275                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dev.so
+7f99dc001000-7f99dc008000 rw-p 00151000 08:03 5244275                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dev.so
+7f99dc008000-7f99dc039000 rw-p 00000000 00:00 0 
+7f99dc039000-7f99dc189000 r-xp 00000000 08:03 5243235                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_cpt.so
+7f99dc189000-7f99dc388000 ---p 00150000 08:03 5243235                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_cpt.so
+7f99dc388000-7f99dc3a0000 rw-p 0014f000 08:03 5243235                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsys_cpt.so
+7f99dc3a0000-7f99dc3a7000 rw-p 00000000 00:00 0 
+7f99dc3a7000-7f99dd8f2000 r-xp 00000000 08:03 5243529                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_astr.so
+7f99dd8f2000-7f99ddaf2000 ---p 0154b000 08:03 5243529                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_astr.so
+7f99ddaf2000-7f99ddca3000 rw-p 0154b000 08:03 5243529                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libatm_astr.so
+7f99ddca3000-7f99ddcc4000 rw-p 00000000 00:00 0 
+7f99ddcc4000-7f99e2909000 r-xp 00000000 08:03 5244782                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_wys.so
+7f99e2909000-7f99e2b08000 ---p 04c45000 08:03 5244782                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_wys.so
+7f99e2b08000-7f99e2f79000 rw-p 04c44000 08:03 5244782                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_wys.so
+7f99e2f79000-7f99e30e3000 rw-p 00000000 00:00 0 
+7f99e30e3000-7f99e3102000 r-xp 00000000 08:03 5243872                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_definition.so
+7f99e3102000-7f99e3301000 ---p 0001f000 08:03 5243872                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_definition.so
+7f99e3301000-7f99e3304000 rw-p 0001e000 08:03 5243872                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_cdb_atom_definition.so
+7f99e3304000-7f99e330b000 r-xp 00000000 08:03 5243288                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_put.so
+7f99e330b000-7f99e350a000 ---p 00007000 08:03 5243288                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_put.so
+7f99e350a000-7f99e350b000 rw-p 00006000 08:03 5243288                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_put.so
+7f99e350b000-7f99e3846000 r-xp 00000000 08:03 5244746                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dstr.so
+7f99e3846000-7f99e3a46000 ---p 0033b000 08:03 5244746                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dstr.so
+7f99e3a46000-7f99e3aa5000 rw-p 0033b000 08:03 5244746                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libddb_dstr.so
+7f99e3aa5000-7f99e3d80000 r-xp 00000000 08:03 5244173                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_dbs.so
+7f99e3d80000-7f99e3f7f000 ---p 002db000 08:03 5244173                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_dbs.so
+7f99e3f7f000-7f99e4000000 rw-p 002da000 08:03 5244173                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_dbs.so
+7f99e4000000-7f99e4021000 rw-p 00000000 00:00 0 
+7f99e4021000-7f99e8000000 ---p 00000000 00:00 0 
+7f99e8000000-7f99eb864000 rw-p 00000000 00:00 0 
+7f99eb864000-7f99ec000000 ---p 00000000 00:00 0 
+7f99ec0ef000-7f99ec0fd000 r-xp 00000000 08:03 5244055                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_dyn.so
+7f99ec0fd000-7f99ec2fc000 ---p 0000e000 08:03 5244055                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_dyn.so
+7f99ec2fc000-7f99ec2fe000 rw-p 0000d000 08:03 5244055                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_dyn.so
+7f99ec2fe000-7f99ec321000 r-xp 00000000 08:03 5244073                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_qsym.so
+7f99ec321000-7f99ec521000 ---p 00023000 08:03 5244073                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_qsym.so
+7f99ec521000-7f99ec523000 rw-p 00023000 08:03 5244073                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_qsym.so
+7f99ec523000-7f99ec525000 r-xp 00000000 08:03 5244163                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_itcl.so
+7f99ec525000-7f99ec724000 ---p 00002000 08:03 5244163                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_itcl.so
+7f99ec724000-7f99ec725000 rw-p 00001000 08:03 5244163                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_itcl.so
+7f99ec725000-7f99ec7d7000 r-xp 00000000 08:03 5244102                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_msg.so
+7f99ec7d7000-7f99ec9d7000 ---p 000b2000 08:03 5244102                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_msg.so
+7f99ec9d7000-7f99ec9e0000 rw-p 000b2000 08:03 5244102                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_msg.so
+7f99ec9e0000-7f99eca15000 rw-p 00000000 00:00 0 
+7f99eca15000-7f99eca22000 r-xp 00000000 08:03 5244070                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_xml.so
+7f99eca22000-7f99ecc21000 ---p 0000d000 08:03 5244070                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_xml.so
+7f99ecc21000-7f99ecc23000 rw-p 0000c000 08:03 5244070                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_xml.so
+7f99ecc23000-7f99ecf62000 r-xp 00000000 08:03 5244958                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libaxerces-c.so
+7f99ecf62000-7f99ed161000 ---p 0033f000 08:03 5244958                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libaxerces-c.so
+7f99ed161000-7f99ed19f000 rw-p 0033e000 08:03 5244958                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libaxerces-c.so
+7f99ed19f000-7f99ed1a0000 rw-p 00000000 00:00 0 
+7f99ed1a0000-7f99ed1a1000 r-xp 00000000 08:03 5243829                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_interface.so
+7f99ed1a1000-7f99ed3a0000 ---p 00001000 08:03 5243829                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_interface.so
+7f99ed3a0000-7f99ed3a1000 rw-p 00000000 08:03 5243829                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_interface.so
+7f99ed3a1000-7f99ed3bb000 r-xp 00000000 08:03 5243727                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_big.so
+7f99ed3bb000-7f99ed5ba000 ---p 0001a000 08:03 5243727                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_big.so
+7f99ed5ba000-7f99ed5bb000 rw-p 00019000 08:03 5243727                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_big.so
+7f99ed5bb000-7f99ed5bc000 rw-p 00000000 00:00 0 
+7f99ed5bc000-7f99ed5d5000 r-xp 00000000 08:03 5243477                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_pdb.so
+7f99ed5d5000-7f99ed7d4000 ---p 00019000 08:03 5243477                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_pdb.so
+7f99ed7d4000-7f99ed7d6000 rw-p 00018000 08:03 5243477                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libdb_pdb.so
+7f99ed7d6000-7f99ed7dd000 r-xp 00000000 08:03 5244500                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_tst.so
+7f99ed7dd000-7f99ed9dd000 ---p 00007000 08:03 5244500                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_tst.so
+7f99ed9dd000-7f99ed9de000 rw-p 00007000 08:03 5244500                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_tst.so
+7f99ed9de000-7f99eda00000 r-xp 00000000 08:03 5245034                    /home/ngocsang/altera_lite/16.0/quartus/linux64/liblzma.so.5
+7f99eda00000-7f99edaff000 ---p 00022000 08:03 5245034                    /home/ngocsang/altera_lite/16.0/quartus/linux64/liblzma.so.5
+7f99edaff000-7f99edb00000 rw-p 00021000 08:03 5245034                    /home/ngocsang/altera_lite/16.0/quartus/linux64/liblzma.so.5
+7f99edb00000-7f99edb03000 r-xp 00000000 08:03 5244774                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_clw.so
+7f99edb03000-7f99edd03000 ---p 00003000 08:03 5244774                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_clw.so
+7f99edd03000-7f99edd04000 rw-p 00003000 08:03 5244774                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_clw.so
+7f99edd04000-7f99edd4b000 r-xp 00000000 08:03 5243459                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_atcl.so
+7f99edd4b000-7f99edf4a000 ---p 00047000 08:03 5243459                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_atcl.so
+7f99edf4a000-7f99edf4f000 rw-p 00046000 08:03 5243459                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_atcl.so
+7f99edf4f000-7f99edf6d000 r-xp 00000000 08:03 5244128                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_fstr.so
+7f99edf6d000-7f99ee16d000 ---p 0001e000 08:03 5244128                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_fstr.so
+7f99ee16d000-7f99ee171000 rw-p 0001e000 08:03 5244128                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_fstr.so
+7f99ee171000-7f99ee197000 r-xp 00000000 08:03 5243245                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_qtl.so
+7f99ee197000-7f99ee397000 ---p 00026000 08:03 5243245                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_qtl.so
+7f99ee397000-7f99ee39c000 rw-p 00026000 08:03 5243245                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_qtl.so
+7f99ee39c000-7f99ee3bf000 r-xp 00000000 08:03 5244494                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_cfg_ini.so
+7f99ee3bf000-7f99ee5bf000 ---p 00023000 08:03 5244494                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_cfg_ini.so
+7f99ee5bf000-7f99ee5c4000 rw-p 00023000 08:03 5244494                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_cfg_ini.so
+7f99ee5c4000-7f99ee5c5000 rw-p 00000000 00:00 0 
+7f99ee5c5000-7f99ee5e2000 r-xp 00000000 08:03 5244721                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_zlib.so
+7f99ee5e2000-7f99ee7e1000 ---p 0001d000 08:03 5244721                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_zlib.so
+7f99ee7e1000-7f99ee7e2000 rw-p 0001c000 08:03 5244721                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_zlib.so
+7f99ee7e2000-7f99ee83d000 r-xp 00000000 08:03 5243910                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_gen.so
+7f99ee83d000-7f99eea3c000 ---p 0005b000 08:03 5243910                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_gen.so
+7f99eea3c000-7f99eea3f000 rw-p 0005a000 08:03 5243910                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_gen.so
+7f99eea3f000-7f99eea66000 r-xp 00000000 08:03 5244125                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_fio.so
+7f99eea66000-7f99eec66000 ---p 00027000 08:03 5244125                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_fio.so
+7f99eec66000-7f99eec6b000 rw-p 00027000 08:03 5244125                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_fio.so
+7f99eec6b000-7f99eec9d000 r-xp 00000000 08:03 5244978                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbb.so.2
+7f99eec9d000-7f99eee9d000 ---p 00032000 08:03 5244978                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbb.so.2
+7f99eee9d000-7f99eeea1000 rw-p 00032000 08:03 5244978                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbb.so.2
+7f99eeea1000-7f99eeea3000 rw-p 00000000 00:00 0 
+7f99eeea3000-7f99eeec3000 r-xp 00000000 08:03 5244633                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_mem.so
+7f99eeec3000-7f99ef0c3000 ---p 00020000 08:03 5244633                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_mem.so
+7f99ef0c3000-7f99ef0c4000 rw-p 00020000 08:03 5244633                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_mem.so
+7f99ef0c4000-7f99ef0e5000 r-xp 00000000 08:03 5243613                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_err.so
+7f99ef0e5000-7f99ef2e5000 ---p 00021000 08:03 5243613                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_err.so
+7f99ef2e5000-7f99ef2e7000 rw-p 00021000 08:03 5243613                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_err.so
+7f99ef2e7000-7f99ef2f5000 rw-p 00000000 00:00 0 
+7f99ef2f5000-7f99ef2fd000 r-xp 00000000 08:03 5244177                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ver.so
+7f99ef2fd000-7f99ef4fc000 ---p 00008000 08:03 5244177                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ver.so
+7f99ef4fc000-7f99ef4fd000 rw-p 00007000 08:03 5244177                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_ver.so
+7f99ef4fd000-7f99ef4ff000 r-xp 00000000 08:03 5244941                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libqcl_pll_tcl.so
+7f99ef4ff000-7f99ef6fe000 ---p 00002000 08:03 5244941                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libqcl_pll_tcl.so
+7f99ef6fe000-7f99ef6ff000 rw-p 00001000 08:03 5244941                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libqcl_pll_tcl.so
+7f99ef6ff000-7f99ef8ff000 rw-p 00000000 00:00 0 
+7f99ef8ff000-7f99efaff000 rw-p 00000000 00:00 0 
+7f99efaff000-7f99efb02000 ---p 00000000 00:00 0 
+7f99efb02000-7f99efe00000 rw-p 00000000 00:00 0 
+7f99efe00000-7f99f0000000 rw-p 00000000 00:00 0 
+7f99f0000000-7f99f0021000 rw-p 00000000 00:00 0 
+7f99f0021000-7f99f4000000 ---p 00000000 00:00 0 
+7f99f4000000-7f99f4021000 rw-p 00000000 00:00 0 
+7f99f4021000-7f99f8000000 ---p 00000000 00:00 0 
+7f99f80eb000-7f99f80ec000 ---p 00000000 00:00 0 
+7f99f80ec000-7f99f8aec000 rw-p 00000000 00:00 0 
+7f99f8aec000-7f99f8afb000 r-xp 00000000 08:03 5244944                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_thr.so
+7f99f8afb000-7f99f8cfa000 ---p 0000f000 08:03 5244944                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_thr.so
+7f99f8cfa000-7f99f8cfb000 rw-p 0000e000 08:03 5244944                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_thr.so
+7f99f8cfb000-7f99f8d1e000 rw-p 00000000 00:00 0 
+7f99f8d1e000-7f99f8d1f000 r-xp 00000000 08:03 5244965                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbbamalloc.so
+7f99f8d1f000-7f99f8f1e000 ---p 00001000 08:03 5244965                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbbamalloc.so
+7f99f8f1e000-7f99f8f1f000 rw-p 00000000 08:03 5244965                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbbamalloc.so
+7f99f8f1f000-7f99f8f36000 r-xp 00000000 08:03 5244972                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbbmalloc.so.2
+7f99f8f36000-7f99f9136000 ---p 00017000 08:03 5244972                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbbmalloc.so.2
+7f99f9136000-7f99f9139000 rw-p 00017000 08:03 5244972                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbbmalloc.so.2
+7f99f9139000-7f99f9d4c000 rw-p 00000000 00:00 0 
+7f99f9d4c000-7f99f9d4e000 r-xp 00000000 08:03 5244969                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbbmalloc_proxy.so.2
+7f99f9d4e000-7f99f9f4e000 ---p 00002000 08:03 5244969                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbbmalloc_proxy.so.2
+7f99f9f4e000-7f99f9f4f000 rw-p 00002000 08:03 5244969                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtbbmalloc_proxy.so.2
+7f99f9f4f000-7f99fa0f8000 r-xp 00000000 08:03 5244959                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtcl8.6.so
+7f99fa0f8000-7f99fa2f8000 ---p 001a9000 08:03 5244959                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtcl8.6.so
+7f99fa2f8000-7f99fa308000 rw-p 001a9000 08:03 5244959                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtcl8.6.so
+7f99fa308000-7f99fa309000 rw-p 00000000 00:00 0 
+7f99fa309000-7f99fa30f000 r-xp 00000000 08:03 5244185                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtcl_jni_bridge.so
+7f99fa30f000-7f99fa50e000 ---p 00006000 08:03 5244185                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtcl_jni_bridge.so
+7f99fa50e000-7f99fa50f000 rw-p 00005000 08:03 5244185                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libtcl_jni_bridge.so
+7f99fa50f000-7f99fa62d000 r-xp 00000000 08:03 5244291                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsld_filejni.so
+7f99fa62d000-7f99fa82c000 ---p 0011e000 08:03 5244291                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsld_filejni.so
+7f99fa82c000-7f99fa83d000 rw-p 0011d000 08:03 5244291                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libsld_filejni.so
+7f99fa83d000-7f99fa843000 rw-p 00000000 00:00 0 
+7f99fa843000-7f99fa86d000 r-xp 00000000 08:03 5245858                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libdcpr.so
+7f99fa86d000-7f99faa6c000 ---p 0002a000 08:03 5245858                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libdcpr.so
+7f99faa6c000-7f99faa6f000 rw-p 00029000 08:03 5245858                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libdcpr.so
+7f99faa6f000-7f99fac63000 rw-p 00000000 00:00 0 
+7f99fac63000-7f99fac6f000 ---p 00000000 00:00 0 
+7f99fac6f000-7f99fae6f000 rw-p 00000000 00:00 0 
+7f99fae6f000-7f99fb06f000 r-xp 00000000 08:03 5244960                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libnlview.so
+7f99fb06f000-7f99fb07e000 rw-p 00200000 08:03 5244960                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libnlview.so
+7f99fb07e000-7f99fb280000 rw-p 00000000 00:00 0 
+7f99fb280000-7f99fb480000 rw-p 00000000 00:00 0 
+7f99fb480000-7f99fb680000 rw-p 00000000 00:00 0 
+7f99fb680000-7f99fb683000 ---p 00000000 00:00 0 
+7f99fb683000-7f99fb981000 rw-p 00000000 00:00 0 
+7f99fb981000-7f99fbb81000 rw-p 00000000 00:00 0 
+7f99fbb81000-7f99fbd81000 rw-p 00000000 00:00 0 
+7f99fbd81000-7f99fbdea000 r-xp 00000000 08:03 5245904                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libt2k.so
+7f99fbdea000-7f99fbfe9000 ---p 00069000 08:03 5245904                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libt2k.so
+7f99fbfe9000-7f99fbff0000 rw-p 00068000 08:03 5245904                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libt2k.so
+7f99fbff0000-7f99fc000000 rw-p 00000000 00:00 0 
+7f99fc000000-7f99fc718000 rw-p 00000000 00:00 0 
+7f99fc718000-7f9a00000000 ---p 00000000 00:00 0 
+7f9a00000000-7f9a0002e000 rw-p 00000000 00:00 0 
+7f9a0002e000-7f9a04000000 ---p 00000000 00:00 0 
+7f9a04000000-7f9a04021000 rw-p 00000000 00:00 0 
+7f9a04021000-7f9a08000000 ---p 00000000 00:00 0 
+7f9a08000000-7f9a08021000 rw-p 00000000 00:00 0 
+7f9a08021000-7f9a0c000000 ---p 00000000 00:00 0 
+7f9a0c000000-7f9a0c2be000 rw-p 00000000 00:00 0 
+7f9a0c2be000-7f9a10000000 ---p 00000000 00:00 0 
+7f9a10000000-7f9a10278000 rw-p 00000000 00:00 0 
+7f9a10278000-7f9a14000000 ---p 00000000 00:00 0 
+7f9a14023000-7f9a14033000 r-xp 00000000 08:03 5245891                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnio.so
+7f9a14033000-7f9a14233000 ---p 00010000 08:03 5245891                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnio.so
+7f9a14233000-7f9a14234000 rw-p 00010000 08:03 5245891                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnio.so
+7f9a14234000-7f9a142a2000 r-xp 00000000 08:03 267023                     /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f9a142a2000-7f9a144a2000 ---p 0006e000 08:03 267023                     /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f9a144a2000-7f9a144a3000 r--p 0006e000 08:03 267023                     /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f9a144a3000-7f9a144a4000 rw-p 0006f000 08:03 267023                     /lib/x86_64-linux-gnu/libpcre.so.3.13.2
+7f9a144a4000-7f9a144ab000 r-xp 00000000 08:03 1712957                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f9a144ab000-7f9a146aa000 ---p 00007000 08:03 1712957                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f9a146aa000-7f9a146ab000 r--p 00006000 08:03 1712957                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f9a146ab000-7f9a146ac000 rw-p 00007000 08:03 1712957                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f9a14711000-7f9a14714000 ---p 00000000 00:00 0 
+7f9a14714000-7f9a14812000 rw-p 00000000 00:00 0 
+7f9a14812000-7f9a14815000 ---p 00000000 00:00 0 
+7f9a14815000-7f9a14b13000 rw-p 00000000 00:00 0 
+7f9a14b13000-7f9a14b2a000 r-xp 00000000 08:03 267046                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f9a14b2a000-7f9a14d2a000 ---p 00017000 08:03 267046                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f9a14d2a000-7f9a14d2b000 r--p 00017000 08:03 267046                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f9a14d2b000-7f9a14d2c000 rw-p 00018000 08:03 267046                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f9a14d2c000-7f9a14d2e000 rw-p 00000000 00:00 0 
+7f9a14d2e000-7f9a14d4d000 r-xp 00000000 08:03 267052                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f9a14d4d000-7f9a14f4c000 ---p 0001f000 08:03 267052                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f9a14f4c000-7f9a14f4d000 r--p 0001e000 08:03 267052                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f9a14f4d000-7f9a14f4e000 rw-p 0001f000 08:03 267052                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f9a14f4e000-7f9a14f50000 rw-p 00000000 00:00 0 
+7f9a14f50000-7f9a14f69000 r-xp 00000000 08:03 267085                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f9a14f69000-7f9a15168000 ---p 00019000 08:03 267085                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f9a15168000-7f9a15169000 r--p 00018000 08:03 267085                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f9a15169000-7f9a1516a000 rw-p 00019000 08:03 267085                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f9a1520e000-7f9a15211000 ---p 00000000 00:00 0 
+7f9a15211000-7f9a15247000 rw-p 00000000 00:00 0 
+7f9a15247000-7f9a1524a000 ---p 00000000 00:00 0 
+7f9a1524a000-7f9a15348000 rw-p 00000000 00:00 0 
+7f9a15348000-7f9a1534b000 ---p 00000000 00:00 0 
+7f9a1534b000-7f9a15649000 rw-p 00000000 00:00 0 
+7f9a15649000-7f9a1594a000 rw-p 00000000 00:00 0 
+7f9a1594a000-7f9a15960000 r-xp 00000000 08:03 5245862                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnet.so
+7f9a15960000-7f9a15b5f000 ---p 00016000 08:03 5245862                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnet.so
+7f9a15b5f000-7f9a15b60000 rw-p 00015000 08:03 5245862                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnet.so
+7f9a15b60000-7f9a15b68000 r-xp 00000000 08:03 5245040                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_chrono.so.1.59.0
+7f9a15b68000-7f9a15d67000 ---p 00008000 08:03 5245040                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_chrono.so.1.59.0
+7f9a15d67000-7f9a15d68000 rw-p 00007000 08:03 5245040                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_chrono.so.1.59.0
+7f9a15d68000-7f9a15d6c000 r-xp 00000000 08:03 5245057                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_timer.so.1.59.0
+7f9a15d6c000-7f9a15f6b000 ---p 00004000 08:03 5245057                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_timer.so.1.59.0
+7f9a15f6b000-7f9a15f6c000 rw-p 00003000 08:03 5245057                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_timer.so.1.59.0
+7f9a15f6c000-7f9a15f7a000 r-xp 00000000 08:03 5246074                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libgomp.so.1
+7f9a15f7a000-7f9a16179000 ---p 0000e000 08:03 5246074                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libgomp.so.1
+7f9a16179000-7f9a1617a000 rw-p 0000d000 08:03 5246074                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libgomp.so.1
+7f9a1617a000-7f9a16264000 r-xp 00000000 08:03 5246075                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libstdc++.so.6
+7f9a16264000-7f9a16463000 ---p 000ea000 08:03 5246075                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libstdc++.so.6
+7f9a16463000-7f9a1646b000 r--p 000e9000 08:03 5246075                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libstdc++.so.6
+7f9a1646b000-7f9a1646d000 rw-p 000f1000 08:03 5246075                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libstdc++.so.6
+7f9a1646d000-7f9a16482000 rw-p 00000000 00:00 0 
+7f9a16482000-7f9a1653e000 r-xp 00000000 08:03 5245042                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_unit_test_framework.so.1.59.0
+7f9a1653e000-7f9a1673d000 ---p 000bc000 08:03 5245042                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_unit_test_framework.so.1.59.0
+7f9a1673d000-7f9a16744000 rw-p 000bb000 08:03 5245042                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_unit_test_framework.so.1.59.0
+7f9a16744000-7f9a16746000 rw-p 00000000 00:00 0 
+7f9a16746000-7f9a16855000 r-xp 00000000 08:03 266936                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4800.1
+7f9a16855000-7f9a16a54000 ---p 0010f000 08:03 266936                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4800.1
+7f9a16a54000-7f9a16a55000 r--p 0010e000 08:03 266936                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4800.1
+7f9a16a55000-7f9a16a56000 rw-p 0010f000 08:03 266936                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.4800.1
+7f9a16a56000-7f9a16a57000 rw-p 00000000 00:00 0 
+7f9a16a57000-7f9a16aa9000 r-xp 00000000 08:03 1713112                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4800.1
+7f9a16aa9000-7f9a16ca8000 ---p 00052000 08:03 1713112                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4800.1
+7f9a16ca8000-7f9a16ca9000 r--p 00051000 08:03 1713112                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4800.1
+7f9a16ca9000-7f9a16caa000 rw-p 00052000 08:03 1713112                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.4800.1
+7f9a16cc2000-7f9a16cc5000 ---p 00000000 00:00 0 
+7f9a16cc5000-7f9a16cfb000 rw-p 00000000 00:00 0 
+7f9a16cfb000-7f9a16cfe000 ---p 00000000 00:00 0 
+7f9a16cfe000-7f9a16d34000 rw-p 00000000 00:00 0 
+7f9a16d34000-7f9a16da4000 r--s 006c2000 08:03 5250645                    /home/ngocsang/altera_lite/16.0/quartus/cusp/bin/cusp-engine.jar
+7f9a16da4000-7f9a16da7000 ---p 00000000 00:00 0 
+7f9a16da7000-7f9a16ea5000 rw-p 00000000 00:00 0 
+7f9a16ea5000-7f9a16f08000 r-xp 00000000 08:03 5245046                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_program_options.so.1.59.0
+7f9a16f08000-7f9a17108000 ---p 00063000 08:03 5245046                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_program_options.so.1.59.0
+7f9a17108000-7f9a1710c000 rw-p 00063000 08:03 5245046                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_program_options.so.1.59.0
+7f9a1710c000-7f9a1728c000 r-xp 00000000 08:03 1713074                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4800.1
+7f9a1728c000-7f9a1748c000 ---p 00180000 08:03 1713074                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4800.1
+7f9a1748c000-7f9a17490000 r--p 00180000 08:03 1713074                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4800.1
+7f9a17490000-7f9a17492000 rw-p 00184000 08:03 1713074                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.4800.1
+7f9a17492000-7f9a17494000 rw-p 00000000 00:00 0 
+7f9a1749e000-7f9a174a0000 r-xp 00000000 08:03 5245061                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_system.so.1.59.0
+7f9a174a0000-7f9a176a0000 ---p 00002000 08:03 5245061                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_system.so.1.59.0
+7f9a176a0000-7f9a176a1000 rw-p 00002000 08:03 5245061                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_system.so.1.59.0
+7f9a176a1000-7f9a176b7000 r-xp 00000000 08:03 5244983                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_filesystem.so.1.59.0
+7f9a176b7000-7f9a178b7000 ---p 00016000 08:03 5244983                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_filesystem.so.1.59.0
+7f9a178b7000-7f9a178b8000 rw-p 00016000 08:03 5244983                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_filesystem.so.1.59.0
+7f9a178b8000-7f9a17905000 r-xp 00000000 08:03 5245062                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_serialization.so.1.59.0
+7f9a17905000-7f9a17b04000 ---p 0004d000 08:03 5245062                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_serialization.so.1.59.0
+7f9a17b04000-7f9a17b08000 rw-p 0004c000 08:03 5245062                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_serialization.so.1.59.0
+7f9a17b08000-7f9a17bf7000 r-xp 00000000 08:03 5245032                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_regex.so.1.59.0
+7f9a17bf7000-7f9a17df6000 ---p 000ef000 08:03 5245032                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_regex.so.1.59.0
+7f9a17df6000-7f9a17dfc000 rw-p 000ee000 08:03 5245032                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libboost_regex.so.1.59.0
+7f9a17dfc000-7f9a17dff000 r-xp 00000000 08:03 1713088                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4800.1
+7f9a17dff000-7f9a17ffe000 ---p 00003000 08:03 1713088                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4800.1
+7f9a17ffe000-7f9a17fff000 r--p 00002000 08:03 1713088                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4800.1
+7f9a17fff000-7f9a18000000 rw-p 00003000 08:03 1713088                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4800.1
+7f9a18000000-7f9a18021000 rw-p 00000000 00:00 0 
+7f9a18021000-7f9a1c000000 ---p 00000000 00:00 0 
+7f9a1c000000-7f9a1c021000 rw-p 00000000 00:00 0 
+7f9a1c021000-7f9a20000000 ---p 00000000 00:00 0 
+7f9a20000000-7f9a21155000 rw-p 00000000 00:00 0 
+7f9a21155000-7f9a24000000 ---p 00000000 00:00 0 
+7f9a24000000-7f9a24021000 rw-p 00000000 00:00 0 
+7f9a24021000-7f9a28000000 ---p 00000000 00:00 0 
+7f9a28000000-7f9a2a216000 rw-p 00000000 00:00 0 
+7f9a2a216000-7f9a2c000000 ---p 00000000 00:00 0 
+7f9a2c000000-7f9a2e543000 rw-p 00000000 00:00 0 
+7f9a2e543000-7f9a30000000 ---p 00000000 00:00 0 
+7f9a30000000-7f9a30021000 rw-p 00000000 00:00 0 
+7f9a30021000-7f9a34000000 ---p 00000000 00:00 0 
+7f9a34000000-7f9a34021000 rw-p 00000000 00:00 0 
+7f9a34021000-7f9a38000000 ---p 00000000 00:00 0 
+7f9a38000000-7f9a38021000 rw-p 00000000 00:00 0 
+7f9a38021000-7f9a3c000000 ---p 00000000 00:00 0 
+7f9a3c022000-7f9a3c02d000 r--s 00000000 08:03 919408                     /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le64.cache-6
+7f9a3c02d000-7f9a3c02f000 r--s 00000000 08:03 919382                     /var/cache/fontconfig/99e8ed0e538f840c565b6ed5dad60d56-le64.cache-6
+7f9a3c02f000-7f9a3c035000 r--s 00000000 08:03 919124                     /var/cache/fontconfig/2cd17615ca594fa2959ae173292e504c-le64.cache-6
+7f9a3c035000-7f9a3c036000 r--s 00000000 08:03 919123                     /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le64.cache-6
+7f9a3c036000-7f9a3c04b000 r--s 00000000 08:03 919122                     /var/cache/fontconfig/04aabc0a78ac019cf9454389977116d2-le64.cache-6
+7f9a3c04b000-7f9a3c04c000 r--s 00000000 08:03 919121                     /var/cache/fontconfig/1ac9eb803944fde146138c791f5cc56a-le64.cache-6
+7f9a3c04c000-7f9a3c050000 r--s 00000000 08:03 919120                     /var/cache/fontconfig/385c0604a188198f04d133e54aba7fe7-le64.cache-6
+7f9a3c050000-7f9a3c051000 r--s 00000000 08:03 919119                     /var/cache/fontconfig/dc05db6664285cc2f12bf69c139ae4c3-le64.cache-6
+7f9a3c051000-7f9a3c054000 r--s 00000000 08:03 919086                     /var/cache/fontconfig/767a8244fc0220cfb567a839d0392e0b-le64.cache-6
+7f9a3c054000-7f9a3c055000 r--s 00000000 08:03 919085                     /var/cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le64.cache-6
+7f9a3c055000-7f9a3c05a000 r--s 00000000 08:03 917592                     /var/cache/fontconfig/8801497958630a81b71ace7c5f9b32a8-le64.cache-6
+7f9a3c05a000-7f9a3c05b000 r--s 00000000 08:03 919074                     /var/cache/fontconfig/bab58bb527bb656aaa9f116d68a48d89-le64.cache-6
+7f9a3c05b000-7f9a3c062000 r--s 00000000 08:03 919073                     /var/cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-6
+7f9a3c062000-7f9a3c063000 r--s 00000000 08:03 918989                     /var/cache/fontconfig/56cf4f4769d0f4abc89a4895d7bd3ae1-le64.cache-6
+7f9a3c063000-7f9a3c064000 r--s 00000000 08:03 918988                     /var/cache/fontconfig/b9d506c9ac06c20b433354fa67a72993-le64.cache-6
+7f9a3c064000-7f9a3c06a000 r--s 00000000 08:03 918824                     /var/cache/fontconfig/b47c4e1ecd0709278f4910c18777a504-le64.cache-6
+7f9a3c06a000-7f9a3c07d000 r--s 00000000 08:03 918822                     /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-6
+7f9a3c07d000-7f9a3c088000 r--s 00000000 08:03 924307                     /var/cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-6
+7f9a3c088000-7f9a3c093000 r--s 00000000 08:03 918094                     /var/cache/fontconfig/83bf95040141907cd45bb53cf7c1c148-le64.cache-6
+7f9a3c093000-7f9a3c0a5000 r--s 00000000 08:03 918081                     /var/cache/fontconfig/9b89f8e3dae116d678bbf48e5f21f69b-le64.cache-6
+7f9a3c0b3000-7f9a3c0b7000 r--s 00084000 08:03 5245790                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/jsse.jar
+7f9a3c0b7000-7f9a3c0ba000 r--s 00022000 08:03 5637937                    /home/ngocsang/altera_lite/16.0/ip/altera/color_plane_sequencer/lib/ip_toolbench/jdom.jar
+7f9a3c0ba000-7f9a3c0be000 r--s 0004d000 08:03 5637936                    /home/ngocsang/altera_lite/16.0/ip/altera/color_plane_sequencer/lib/ip_toolbench/forms_rt.jar
+7f9a3c0be000-7f9a3c15c000 r-xp 00000000 08:03 5244761                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_sqlite3.so
+7f9a3c15c000-7f9a3c35b000 ---p 0009e000 08:03 5244761                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_sqlite3.so
+7f9a3c35b000-7f9a3c360000 rw-p 0009d000 08:03 5244761                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_sqlite3.so
+7f9a3c360000-7f9a3c36d000 r-xp 00000000 08:03 5243656                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_sqlite3_jdbc_jni_bridge.so
+7f9a3c36d000-7f9a3c56c000 ---p 0000d000 08:03 5243656                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_sqlite3_jdbc_jni_bridge.so
+7f9a3c56c000-7f9a3c56d000 rw-p 0000c000 08:03 5243656                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libccl_sqlite3_jdbc_jni_bridge.so
+7f9a3c56d000-7f9a3c76d000 rw-p 00000000 00:00 0 
+7f9a3c76d000-7f9a3c770000 ---p 00000000 00:00 0 
+7f9a3c770000-7f9a3c86e000 rw-p 00000000 00:00 0 
+7f9a3c86e000-7f9a3c871000 ---p 00000000 00:00 0 
+7f9a3c871000-7f9a3c96f000 rw-p 00000000 00:00 0 
+7f9a3c96f000-7f9a3c972000 ---p 00000000 00:00 0 
+7f9a3c972000-7f9a3ca70000 rw-p 00000000 00:00 0 
+7f9a3ca70000-7f9a3ca73000 ---p 00000000 00:00 0 
+7f9a3ca73000-7f9a3cb71000 rw-p 00000000 00:00 0 
+7f9a3cb71000-7f9a3cb86000 r-xp 00000000 08:03 5246076                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libgcc_s.so.1
+7f9a3cb86000-7f9a3cd86000 ---p 00015000 08:03 5246076                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libgcc_s.so.1
+7f9a3cd86000-7f9a3cd87000 rw-p 00015000 08:03 5246076                    /home/ngocsang/altera_lite/16.0/quartus/linux64/libgcc_s.so.1
+7f9a3cd87000-7f9a3cdec000 r-xp 00000000 08:03 5245901                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libfontmanager.so
+7f9a3cdec000-7f9a3cfeb000 ---p 00065000 08:03 5245901                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libfontmanager.so
+7f9a3cfeb000-7f9a3cfef000 rw-p 00064000 08:03 5245901                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libfontmanager.so
+7f9a3cfef000-7f9a3d000000 rw-p 00000000 00:00 0 
+7f9a3d000000-7f9a414c0000 rwxp 00000000 00:00 0 
+7f9a414c0000-7f9a4c000000 ---p 00000000 00:00 0 
+7f9a4c000000-7f9a4c92b000 rw-p 00000000 00:00 0 
+7f9a4c92b000-7f9a50000000 ---p 00000000 00:00 0 
+7f9a50000000-7f9a508bb000 rw-p 00000000 00:00 0 
+7f9a508bb000-7f9a54000000 ---p 00000000 00:00 0 
+7f9a54000000-7f9a57ffc000 rw-p 00000000 00:00 0 
+7f9a57ffc000-7f9a58000000 ---p 00000000 00:00 0 
+7f9a58000000-7f9a58001000 r--s 00000000 08:03 918820                     /var/cache/fontconfig/551ecf3b0e8b0bca0f25c0944f561853-le64.cache-6
+7f9a58001000-7f9a58002000 r--s 00000000 08:03 918813                     /var/cache/fontconfig/30829fa25452a46451e813d634d7f916-le64.cache-6
+7f9a58002000-7f9a58003000 r--s 00003000 08:03 659722                     /home/ngocsang/altera_lite/16.0/ip/altera/hps/widget/pin_mux_widget.jar
+7f9a58003000-7f9a5800c000 r--s 0007b000 08:03 5637935                    /home/ngocsang/altera_lite/16.0/ip/altera/color_plane_sequencer/lib/ip_toolbench/color_plane_sequencer.jar
+7f9a5800c000-7f9a5800f000 r--s 00022000 08:03 5378112                    /home/ngocsang/altera_lite/16.0/ip/altera/test_pattern_generator/lib/ip_toolbench/jdom.jar
+7f9a5800f000-7f9a58013000 r--s 0004d000 08:03 5378110                    /home/ngocsang/altera_lite/16.0/ip/altera/test_pattern_generator/lib/ip_toolbench/forms_rt.jar
+7f9a58013000-7f9a5801c000 r--s 0007b000 08:03 5378111                    /home/ngocsang/altera_lite/16.0/ip/altera/test_pattern_generator/lib/ip_toolbench/test_pattern_generator.jar
+7f9a5801c000-7f9a5801f000 r--s 00022000 08:03 5773014                    /home/ngocsang/altera_lite/16.0/ip/altera/alpha_blending_mixer/lib/ip_toolbench/jdom.jar
+7f9a5801f000-7f9a58023000 r--s 0004d000 08:03 5773013                    /home/ngocsang/altera_lite/16.0/ip/altera/alpha_blending_mixer/lib/ip_toolbench/forms_rt.jar
+7f9a58023000-7f9a5802c000 r--s 0007b000 08:03 5773015                    /home/ngocsang/altera_lite/16.0/ip/altera/alpha_blending_mixer/lib/ip_toolbench/alpha_blending_mixer.jar
+7f9a58030000-7f9a58032000 r--s 00003000 08:03 5253891                    /home/ngocsang/altera_lite/16.0/quartus/common/librarian/factories/cusp-factory.jar
+7f9a58032000-7f9a5803b000 r--s 00034000 08:03 5383561                    /home/ngocsang/altera_lite/16.0/quartus/dsp_builder/bin64/simulink_model.jar
+7f9a5803b000-7f9a5803d000 r--s 0000f000 08:03 5383562                    /home/ngocsang/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/JSAP-2.0a.jar
+7f9a5803d000-7f9a5805d000 r--s 001d6000 08:03 5383563                    /home/ngocsang/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/castor-1.0.3.jar
+7f9a5805d000-7f9a5806c000 r--s 00085000 08:03 5383560                    /home/ngocsang/altera_lite/16.0/quartus/dsp_builder/bin64/dspb.jar
+7f9a5806c000-7f9a5807b000 r-xp 00000000 08:03 1712595                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9a5807b000-7f9a5827a000 ---p 0000f000 08:03 1712595                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9a5827a000-7f9a5827b000 r--p 0000e000 08:03 1712595                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9a5827b000-7f9a5827c000 rw-p 0000f000 08:03 1712595                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9a5827c000-7f9a58281000 r-xp 00000000 08:03 1712613                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f9a58281000-7f9a58480000 ---p 00005000 08:03 1712613                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f9a58480000-7f9a58481000 r--p 00004000 08:03 1712613                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f9a58481000-7f9a58482000 rw-p 00005000 08:03 1712613                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f9a58482000-7f9a58483000 r--s 00000000 08:03 918619                     /var/cache/fontconfig/0c9eb80ebd1c36541ebe2852d3bb0c49-le64.cache-6
+7f9a58483000-7f9a58486000 r--s 00000000 08:03 918095                     /var/cache/fontconfig/75114ca45c98e8a441da0ff356701271-le64.cache-6
+7f9a58486000-7f9a58489000 r--s 00000000 08:03 917819                     /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-6
+7f9a58489000-7f9a5848d000 r--s 00000000 08:03 917822                     /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-6
+7f9a5848d000-7f9a584a0000 r--s 00345000 08:03 5245803                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/resources.jar
+7f9a584a0000-7f9a584f1000 r-xp 00000000 08:03 5245877                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt_xawt.so
+7f9a584f1000-7f9a586f0000 ---p 00051000 08:03 5245877                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt_xawt.so
+7f9a586f0000-7f9a586f4000 rw-p 00050000 08:03 5245877                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt_xawt.so
+7f9a586f4000-7f9a586f5000 rw-p 00000000 00:00 0 
+7f9a586f5000-7f9a58798000 r-xp 00000000 08:03 5245854                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt.so
+7f9a58798000-7f9a58997000 ---p 000a3000 08:03 5245854                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt.so
+7f9a58997000-7f9a589a3000 rw-p 000a2000 08:03 5245854                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt.so
+7f9a589a3000-7f9a589c7000 rw-p 00000000 00:00 0 
+7f9a589c7000-7f9a589d2000 r--s 00210000 08:03 5245948                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/ext/localedata.jar
+7f9a589d2000-7f9a589ee000 r--s 00393000 08:03 5245941                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/ext/cldrdata.jar
+7f9a589ee000-7f9a58a2b000 r--s 0024e000 08:03 5249656                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/xbean.jar
+7f9a58a2b000-7f9a58a2d000 r--s 00008000 08:03 5249688                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/wraplf.jar
+7f9a58a2d000-7f9a58a2e000 r--s 00002000 08:03 5249686                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/swing-worker.jar
+7f9a58a2e000-7f9a58a30000 r--s 00014000 08:03 5249652                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/org-netbeans-swing-outline-RELEASE691-sources.jar
+7f9a58a30000-7f9a58a31000 r--s 00011000 08:03 5249691                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/miglayout-swing.jar
+7f9a58a31000-7f9a58a37000 r--s 0002e000 08:03 5249618                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/l2fprod-common-sheet.jar
+7f9a58a37000-7f9a58a39000 r--s 00004000 08:03 5249607                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jsr173_1.0_api.jar
+7f9a58a39000-7f9a58a3d000 r--s 00031000 08:03 5249655                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jline-2.12.jar
+7f9a58a3d000-7f9a58a49000 r--s 0008f000 08:03 5249674                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jgraphx.jar
+7f9a58a49000-7f9a58a5a000 r--s 0014c000 08:03 5249632                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jfreechart-1.0.13.jar
+7f9a58a5a000-7f9a58a60000 r--s 00046000 08:03 5249680                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jcommon-1.0.16.jar
+7f9a58a60000-7f9a58a98000 r--s 00217000 08:03 5249611                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/docking-frames-core.jar
+7f9a58a98000-7f9a58aae000 r--s 000bc000 08:03 5249630                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/docking-frames-common.jar
+7f9a58aae000-7f9a58ab0000 r--s 00003000 08:03 5249685                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.util.elf.jar
+7f9a58ab0000-7f9a58ab2000 r--s 00002000 08:03 5249612                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.tools.sopcformats.jar
+7f9a58ab2000-7f9a58ab3000 r--s 00002000 08:03 5249547                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.tools.exampledesigns.jar
+7f9a58ab3000-7f9a58ab4000 r--s 00006000 08:03 5249693                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.spdy.jar
+7f9a58ab4000-7f9a58ab5000 r--s 0000b000 08:03 5249549                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.sldhubchannel.jar
+7f9a58ab5000-7f9a58ab7000 r--s 00006000 08:03 5249687                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.gdbserver.jar
+7f9a58ab7000-7f9a58ab8000 r--s 00007000 08:03 5249555                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.issp.jar
+7f9a58ab8000-7f9a58abb000 r--s 0000d000 08:03 5249689                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.monitor.jar
+7f9a58abb000-7f9a58ac2000 r--s 0003f000 08:03 5249588                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.busanalyzer.jar
+7f9a58ac2000-7f9a58ad0000 r--s 0007f000 08:03 5249619                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-collections-3.2.1.jar
+7f9a58ad0000-7f9a58ad1000 r--s 00003000 08:03 5249584                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.iobus.jar
+7f9a58ad1000-7f9a58ad2000 r--s 00002000 08:03 5249642                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.helper.jar
+7f9a58ad2000-7f9a58ad7000 r--s 0002c000 08:03 5249557                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.dashboard.jar
+7f9a58ad7000-7f9a58adb000 r--s 00020000 08:03 5249551                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.gui.jar
+7f9a58adb000-7f9a58ae0000 r--s 00029000 08:03 5249653                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.database.jar
+7f9a58ae0000-7f9a58ae1000 r--s 00001000 08:03 5249575                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.memory.jar
+7f9a58ae1000-7f9a58ae3000 r--s 00003000 08:03 5249552                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.pli.jar
+7f9a58ae3000-7f9a58ae6000 r--s 00011000 08:03 5249654                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.usb.jar
+7f9a58ae6000-7f9a58aea000 r--s 0001c000 08:03 5249660                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.drivers.jar
+7f9a58aea000-7f9a58b1a000 r--s 00411000 08:03 5249643                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopceditor.jar
+7f9a58b1a000-7f9a58b1b000 ---p 00000000 00:00 0 
+7f9a58b1b000-7f9a58c1b000 rw-p 00000000 00:00 0 
+7f9a58c1b000-7f9a58c1e000 ---p 00000000 00:00 0 
+7f9a58c1e000-7f9a58d1c000 rw-p 00000000 00:00 0 
+7f9a58d1c000-7f9a58d1f000 ---p 00000000 00:00 0 
+7f9a58d1f000-7f9a58e1d000 rw-p 00000000 00:00 0 
+7f9a58e1d000-7f9a58e20000 ---p 00000000 00:00 0 
+7f9a58e20000-7f9a58f1e000 rw-p 00000000 00:00 0 
+7f9a58f1e000-7f9a58f21000 ---p 00000000 00:00 0 
+7f9a58f21000-7f9a5901f000 rw-p 00000000 00:00 0 
+7f9a5901f000-7f9a59022000 ---p 00000000 00:00 0 
+7f9a59022000-7f9a59120000 rw-p 00000000 00:00 0 
+7f9a59120000-7f9a59123000 ---p 00000000 00:00 0 
+7f9a59123000-7f9a59221000 rw-p 00000000 00:00 0 
+7f9a59221000-7f9a59222000 r--s 00006000 08:03 5249595                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.tcpchannel.jar
+7f9a59222000-7f9a59223000 r--s 00001000 08:03 5249581                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.matlabapi.jar
+7f9a59223000-7f9a59226000 r--s 0001c000 08:03 5249677                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.app.jar
+7f9a59226000-7f9a59228000 r--s 0000c000 08:03 5249640                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.hwtclvalidator.jar
+7f9a59228000-7f9a5922a000 r--s 00003000 08:03 5249591                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.script.debugwindow.jar
+7f9a5922a000-7f9a5922c000 r--s 00001000 08:03 5249586                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.nios2.trace.jar
+7f9a5922c000-7f9a5922e000 r--s 00009000 08:03 5249676                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.nios2.rtl.trace.jar
+7f9a5922e000-7f9a59240000 r--s 00091000 08:03 5249566                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.nios2.isa.jar
+7f9a59240000-7f9a59249000 r--s 00076000 08:03 5249629                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jmwizc.jar
+7f9a59249000-7f9a5924b000 r--s 00007000 08:03 5249563                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.ipxact.module.jar
+7f9a5924b000-7f9a5924d000 r--s 0000a000 08:03 5249569                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.widgets.jar
+7f9a5924d000-7f9a59250000 ---p 00000000 00:00 0 
+7f9a59250000-7f9a5934e000 rw-p 00000000 00:00 0 
+7f9a5934e000-7f9a5934f000 ---p 00000000 00:00 0 
+7f9a5934f000-7f9a5944f000 rw-p 00000000 00:00 0 
+7f9a5944f000-7f9a59624000 r--s 033af000 08:03 5245787                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/rt.jar
+7f9a59624000-7f9a59625000 r--s 0000e000 08:03 5249690                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.atlantic.packetformatconverter.jar
+7f9a59625000-7f9a5962a000 r--s 00055000 08:03 5249684                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.hypericonnect.jar
+7f9a5962a000-7f9a5962e000 r--s 00035000 08:03 5249650                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.sbtools.jar
+7f9a5962e000-7f9a59630000 r--s 00007000 08:03 5249672                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.blackboxmodule.jar
+7f9a59630000-7f9a59631000 r--s 00003000 08:03 5249637                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.ui.jar
+7f9a59631000-7f9a59634000 r--s 00020000 08:03 5249594                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.iplauncher.jar
+7f9a59634000-7f9a59636000 r--s 0000e000 08:03 5249659                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.ip.regenerator.jar
+7f9a59636000-7f9a59639000 r--s 00024000 08:03 5249627                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.genman.jar
+7f9a59639000-7f9a5963c000 r--s 0002d000 08:03 5249673                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.launch.jar
+7f9a5963c000-7f9a5963d000 r--s 00006000 08:03 5249641                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.configrom.jar
+7f9a5963d000-7f9a5963e000 r--s 00000000 08:03 5249554                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.jtagsimulator.jar
+7f9a5963e000-7f9a5963f000 r--s 00002000 08:03 5249608                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.lightclient.jar
+7f9a5963f000-7f9a59641000 r--s 00007000 08:03 5249606                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.driver.jar
+7f9a59641000-7f9a59649000 r--s 00048000 08:03 5249675                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.jtag.jar
+7f9a59649000-7f9a59657000 r--s 00072000 08:03 5249599                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.elf.jar
+7f9a59657000-7f9a5965b000 r--s 00036000 08:03 5249671                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.gui.jar
+7f9a5965b000-7f9a5965e000 r--s 00038000 08:03 5249679                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.scripting.jar
+7f9a5965e000-7f9a59664000 r--s 0004a000 08:03 5249646                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.designs.jar
+7f9a59664000-7f9a5966f000 r--s 00184000 08:03 5249639                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.jar
+7f9a5966f000-7f9a59676000 r--s 00056000 08:03 5249666                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.flash.jar
+7f9a59676000-7f9a59677000 r--s 00004000 08:03 5249548                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.cpexample.jar
+7f9a59677000-7f9a59678000 r--s 00003000 08:03 5249561                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.tcl.ui.jar
+7f9a59678000-7f9a59679000 r--s 0001f000 08:03 5249559                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.scripting.jar
+7f9a59679000-7f9a5967b000 r--s 00006000 08:03 5249572                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.lwhal.jar
+7f9a5967b000-7f9a5967e000 r--s 0000b000 08:03 5249546                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.hal.jar
+7f9a5967e000-7f9a59682000 r--s 0001c000 08:03 5249568                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.core.jar
+7f9a59682000-7f9a59684000 r--s 0000f000 08:03 5249610                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.commandline.jar
+7f9a59684000-7f9a59691000 r--s 00084000 08:03 5249626                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.editor.jar
+7f9a59691000-7f9a59698000 r--s 00063000 08:03 5249648                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.megawizard2.jar
+7f9a59698000-7f9a5969c000 r--s 00029000 08:03 5249644                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.atlantic.jar
+7f9a5969c000-7f9a596a7000 r--s 00074000 08:03 5249631                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/velocity-dep-1.4.jar
+7f9a596a7000-7f9a596af000 r--s 00051000 08:03 5249664                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/velocity-1.4.jar
+7f9a596af000-7f9a596b3000 r--s 0001f000 08:03 5249628                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/explicitlayout.jar
+7f9a596b3000-7f9a596b5000 r--s 00006000 08:03 5249544                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcfactories.jar
+7f9a596b5000-7f9a596b7000 r--s 0001a000 08:03 5249613                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopclibrary.jar
+7f9a596b7000-7f9a596b8000 r--s 00000000 08:03 5249658                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.librarian.jar
+7f9a596b8000-7f9a596b9000 r--s 00002000 08:03 5249663                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcplatform.jar
+7f9a596b9000-7f9a596ba000 r--s 00000000 08:03 5249564                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.service.jre.jar
+7f9a596ba000-7f9a596bb000 r--s 00000000 08:03 5249550                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/xmlbeans-2.2.0.jar
+7f9a596bb000-7f9a596bf000 r--s 0001e000 08:03 5249657                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.utilities.jar
+7f9a596bf000-7f9a596c0000 r--s 00003000 08:03 5249574                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.embeddedsw.jar
+7f9a596c0000-7f9a596c2000 r--s 00016000 08:03 5249597                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.swinfo.jar
+7f9a596c2000-7f9a596c6000 r--s 0000d000 08:03 5249662                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.schema.jar
+7f9a596c6000-7f9a596c7000 r--s 0000b000 08:03 5249545                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.elements.jar
+7f9a596c7000-7f9a596cc000 r--s 0008b000 08:03 5249645                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.jar
+7f9a596cc000-7f9a596cf000 r--s 00014000 08:03 5249580                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.app_lib.jar
+7f9a596cf000-7f9a596d5000 r--s 0007a000 08:03 5249576                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jacl1.3.2a.jar
+7f9a596d5000-7f9a596d9000 r--s 0002a000 08:03 5249682                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.tcl.interpreter.jar
+7f9a596d9000-7f9a596dc000 r--s 00012000 08:03 5249582                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcreport.build.jar
+7f9a596dc000-7f9a596de000 r--s 00007000 08:03 5249634                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcreport.jar
+7f9a596de000-7f9a596e0000 r--s 0000d000 08:03 5249604                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.atlantic.jar
+7f9a596e0000-7f9a596e1000 r--s 0000c000 08:03 5249589                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-logging-1.1.jar
+7f9a596e1000-7f9a596e4000 r--s 0003e000 08:03 5249577                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.utilities.jar
+7f9a596e4000-7f9a596e6000 r--s 00007000 08:03 5249623                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.model.common.jar
+7f9a596e6000-7f9a596eb000 r--s 0000f000 08:03 5249570                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.privateinterfaces.jar
+7f9a596eb000-7f9a596ee000 r--s 0000b000 08:03 5249573                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar
+7f9a596ee000-7f9a596fe000 r--s 000e8000 08:03 5249615                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.jar
+7f9a596fe000-7f9a59706000 r--s 00051000 08:03 5249621                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.ipxact.jar
+7f9a59706000-7f9a59f06000 rw-p 00000000 00:00 0 
+7f9a59f06000-7f9a5a073000 rw-p 00000000 00:00 0 
+7f9a5a073000-7f9a5a0fb000 ---p 00000000 00:00 0 
+7f9a5a0fb000-7f9a5a1b2000 rw-p 00000000 00:00 0 
+7f9a5a1b2000-7f9a5a1f5000 ---p 00000000 00:00 0 
+7f9a5a1f5000-7f9a5a362000 rw-p 00000000 00:00 0 
+7f9a5a362000-7f9a5a3e9000 ---p 00000000 00:00 0 
+7f9a5a3e9000-7f9a5a4fd000 rw-p 00000000 00:00 0 
+7f9a5a4fd000-7f9a5a7aa000 ---p 00000000 00:00 0 
+7f9a5a7aa000-7f9a5a7c6000 r-xp 00000000 08:03 5245893                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libzip.so
+7f9a5a7c6000-7f9a5a9c5000 ---p 0001c000 08:03 5245893                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libzip.so
+7f9a5a9c5000-7f9a5a9c6000 rw-p 0001b000 08:03 5245893                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libzip.so
+7f9a5a9c6000-7f9a5a9d1000 r-xp 00000000 08:03 266993                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f9a5a9d1000-7f9a5abd0000 ---p 0000b000 08:03 266993                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f9a5abd0000-7f9a5abd1000 r--p 0000a000 08:03 266993                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f9a5abd1000-7f9a5abd2000 rw-p 0000b000 08:03 266993                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f9a5abd2000-7f9a5abd8000 rw-p 00000000 00:00 0 
+7f9a5abd8000-7f9a5abe3000 r-xp 00000000 08:03 267003                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f9a5abe3000-7f9a5ade2000 ---p 0000b000 08:03 267003                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f9a5ade2000-7f9a5ade3000 r--p 0000a000 08:03 267003                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f9a5ade3000-7f9a5ade4000 rw-p 0000b000 08:03 267003                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f9a5ade4000-7f9a5adfa000 r-xp 00000000 08:03 266987                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f9a5adfa000-7f9a5aff9000 ---p 00016000 08:03 266987                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f9a5aff9000-7f9a5affa000 r--p 00015000 08:03 266987                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f9a5affa000-7f9a5affb000 rw-p 00016000 08:03 266987                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f9a5affb000-7f9a5affd000 rw-p 00000000 00:00 0 
+7f9a5affd000-7f9a5b005000 r-xp 00000000 08:03 266989                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f9a5b005000-7f9a5b204000 ---p 00008000 08:03 266989                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f9a5b204000-7f9a5b205000 r--p 00007000 08:03 266989                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f9a5b205000-7f9a5b206000 rw-p 00008000 08:03 266989                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f9a5b206000-7f9a5b230000 r-xp 00000000 08:03 5245861                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libjava.so
+7f9a5b230000-7f9a5b430000 ---p 0002a000 08:03 5245861                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libjava.so
+7f9a5b430000-7f9a5b432000 rw-p 0002a000 08:03 5245861                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libjava.so
+7f9a5b432000-7f9a5b43f000 r-xp 00000000 08:03 5245880                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libverify.so
+7f9a5b43f000-7f9a5b63f000 ---p 0000d000 08:03 5245880                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libverify.so
+7f9a5b63f000-7f9a5b641000 rw-p 0000d000 08:03 5245880                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libverify.so
+7f9a5b641000-7f9a5b648000 r-xp 00000000 08:03 267048                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f9a5b648000-7f9a5b847000 ---p 00007000 08:03 267048                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f9a5b847000-7f9a5b848000 r--p 00006000 08:03 267048                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f9a5b848000-7f9a5b849000 rw-p 00007000 08:03 267048                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f9a5b849000-7f9a5b84e000 r-xp 00000000 08:03 1712589                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f9a5b84e000-7f9a5ba4d000 ---p 00005000 08:03 1712589                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f9a5ba4d000-7f9a5ba4e000 r--p 00004000 08:03 1712589                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f9a5ba4e000-7f9a5ba4f000 rw-p 00005000 08:03 1712589                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f9a5ba4f000-7f9a5ba58000 r-xp 00000000 08:03 1712607                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f9a5ba58000-7f9a5bc57000 ---p 00009000 08:03 1712607                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f9a5bc57000-7f9a5bc58000 r--p 00008000 08:03 1712607                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f9a5bc58000-7f9a5bc59000 rw-p 00009000 08:03 1712607                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f9a5bc59000-7f9a5bc62000 r-xp 00000000 08:03 1712581                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f9a5bc62000-7f9a5be61000 ---p 00009000 08:03 1712581                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f9a5be61000-7f9a5be62000 r--p 00008000 08:03 1712581                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f9a5be62000-7f9a5be63000 rw-p 00009000 08:03 1712581                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f9a5be63000-7f9a5c9a0000 r--p 00000000 08:03 1711376                    /usr/lib/locale/locale-archive
+7f9a5c9a0000-7f9a5c9a1000 ---p 00000000 00:00 0 
+7f9a5c9a1000-7f9a5d3a1000 rw-p 00000000 00:00 0 
+7f9a5d3a1000-7f9a5d3a2000 r--p 00000000 00:00 0 
+7f9a5d3a2000-7f9a5d3a3000 r--s 00000000 08:03 5253890                    /home/ngocsang/altera_lite/16.0/quartus/common/librarian/factories/mdl_factory.jar
+7f9a5d3a3000-7f9a5d3ae000 r--s 00074000 08:03 5383564                    /home/ngocsang/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/velocity-dep-1.4.jar
+7f9a5d3ae000-7f9a5d3b1000 r--s 00013000 08:03 5383566                    /home/ngocsang/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/velocity-tools-1.2.jar
+7f9a5d3b1000-7f9a5d3b9000 r--s 00051000 08:03 5383565                    /home/ngocsang/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/velocity-1.4.jar
+7f9a5d3b9000-7f9a5d3cc000 r--s 00089000 08:03 5383559                    /home/ngocsang/altera_lite/16.0/quartus/dsp_builder/bin64/dspb_entities.jar
+7f9a5d3cc000-7f9a5d3cd000 r--s 00000000 08:03 5253888                    /home/ngocsang/altera_lite/16.0/quartus/common/librarian/factories/dspb_entities.jar
+7f9a5d3cd000-7f9a5d3d0000 ---p 00000000 00:00 0 
+7f9a5d3d0000-7f9a5d4ce000 rw-p 00000000 00:00 0 
+7f9a5d4ce000-7f9a5d4d3000 r-xp 00000000 08:03 1712585                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f9a5d4d3000-7f9a5d6d2000 ---p 00005000 08:03 1712585                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f9a5d6d2000-7f9a5d6d3000 r--p 00004000 08:03 1712585                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f9a5d6d3000-7f9a5d6d4000 rw-p 00005000 08:03 1712585                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f9a5d6d4000-7f9a5d6d6000 r-xp 00000000 08:03 1712574                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f9a5d6d6000-7f9a5d8d6000 ---p 00002000 08:03 1712574                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f9a5d8d6000-7f9a5d8d7000 r--p 00002000 08:03 1712574                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f9a5d8d7000-7f9a5d8d8000 rw-p 00003000 08:03 1712574                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f9a5d8d8000-7f9a5d8f9000 r-xp 00000000 08:03 1713952                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f9a5d8f9000-7f9a5daf8000 ---p 00021000 08:03 1713952                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f9a5daf8000-7f9a5daf9000 r--p 00020000 08:03 1713952                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f9a5daf9000-7f9a5dafa000 rw-p 00021000 08:03 1713952                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f9a5dafa000-7f9a5db0b000 r-xp 00000000 08:03 1712587                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f9a5db0b000-7f9a5dd0a000 ---p 00011000 08:03 1712587                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f9a5dd0a000-7f9a5dd0b000 r--p 00010000 08:03 1712587                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f9a5dd0b000-7f9a5dd0c000 rw-p 00011000 08:03 1712587                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f9a5dd0c000-7f9a5de41000 r-xp 00000000 08:03 1712570                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f9a5de41000-7f9a5e041000 ---p 00135000 08:03 1712570                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f9a5e041000-7f9a5e042000 r--p 00135000 08:03 1712570                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f9a5e042000-7f9a5e046000 rw-p 00136000 08:03 1712570                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f9a5e046000-7f9a5e0a1000 r-xp 00000000 08:03 5245882                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libsplashscreen.so
+7f9a5e0a1000-7f9a5e2a1000 ---p 0005b000 08:03 5245882                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libsplashscreen.so
+7f9a5e2a1000-7f9a5e2a2000 rw-p 0005b000 08:03 5245882                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libsplashscreen.so
+7f9a5e2a2000-7f9a5e2a5000 rw-p 00000000 00:00 0 
+7f9a5e2a5000-7f9a5e3ad000 r-xp 00000000 08:03 266964                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f9a5e3ad000-7f9a5e5ac000 ---p 00108000 08:03 266964                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f9a5e5ac000-7f9a5e5ad000 r--p 00107000 08:03 266964                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f9a5e5ad000-7f9a5e5ae000 rw-p 00108000 08:03 266964                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f9a5e5ae000-7f9a5f1c8000 r-xp 00000000 08:03 5245914                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f9a5f1c8000-7f9a5f3c7000 ---p 00c1a000 08:03 5245914                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f9a5f3c7000-7f9a5f490000 rw-p 00c19000 08:03 5245914                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f9a5f490000-7f9a5f4d1000 rw-p 00000000 00:00 0 
+7f9a5f4d1000-7f9a5f691000 r-xp 00000000 08:03 266894                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f9a5f691000-7f9a5f890000 ---p 001c0000 08:03 266894                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f9a5f890000-7f9a5f894000 r--p 001bf000 08:03 266894                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f9a5f894000-7f9a5f896000 rw-p 001c3000 08:03 266894                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f9a5f896000-7f9a5f89a000 rw-p 00000000 00:00 0 
+7f9a5f89a000-7f9a5f89d000 r-xp 00000000 08:03 266918                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f9a5f89d000-7f9a5fa9c000 ---p 00003000 08:03 266918                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f9a5fa9c000-7f9a5fa9d000 r--p 00002000 08:03 266918                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f9a5fa9d000-7f9a5fa9e000 rw-p 00003000 08:03 266918                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f9a5fa9e000-7f9a5fab5000 r-xp 00000000 08:03 5245913                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f9a5fab5000-7f9a5fcb4000 ---p 00017000 08:03 5245913                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f9a5fcb4000-7f9a5fcb5000 rw-p 00016000 08:03 5245913                    /home/ngocsang/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f9a5fcb5000-7f9a5fccd000 r-xp 00000000 08:03 267040                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f9a5fccd000-7f9a5fecc000 ---p 00018000 08:03 267040                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f9a5fecc000-7f9a5fecd000 r--p 00017000 08:03 267040                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f9a5fecd000-7f9a5fece000 rw-p 00018000 08:03 267040                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f9a5fece000-7f9a5fed2000 rw-p 00000000 00:00 0 
+7f9a5fed2000-7f9a5fef8000 r-xp 00000000 08:03 266866                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f9a5fef8000-7f9a5fef9000 r--s 00014000 08:03 5249616                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/javasysmon.jar
+7f9a5fef9000-7f9a5fefa000 r--s 0000b000 08:03 5249678                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcdocument.jar
+7f9a5fefa000-7f9a5feff000 r--s 00054000 08:03 5249692                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.transforms.jar
+7f9a5feff000-7f9a5ff05000 r--s 00031000 08:03 5249638                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jaxb-core.jar
+7f9a5ff05000-7f9a5ff09000 r--s 00015000 08:03 5249661                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jaxb-api.jar
+7f9a5ff09000-7f9a5ff1a000 r--s 000d0000 08:03 5249567                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/jaxb-impl.jar
+7f9a5ff1a000-7f9a5ff22000 r--s 00051000 08:03 5249609                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.cmsis.jar
+7f9a5ff22000-7f9a5ff28000 r--s 00050000 08:03 5249600                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopc.generator.jar
+7f9a5ff28000-7f9a5ff2f000 r--s 0007c000 08:03 5249624                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.tclmodule.jar
+7f9a5ff2f000-7f9a5ff35000 r--s 00045000 08:03 5249571                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/hamcrest-all-1.3.jar
+7f9a5ff35000-7f9a5ff38000 r--s 0002a000 08:03 5249601                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.hdlwriter.jar
+7f9a5ff38000-7f9a5ff3b000 r--s 0000e000 08:03 5249665                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.minieval2.jar
+7f9a5ff3b000-7f9a5ff3c000 r--s 00006000 08:03 5249636                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.hdlcomponent.jar
+7f9a5ff3c000-7f9a5ff3f000 r--s 00036000 08:03 5249560                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/org-netbeans-swing-outline.jar
+7f9a5ff3f000-7f9a5ff41000 r--s 00010000 08:03 5249622                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopc.qsymbol.jar
+7f9a5ff41000-7f9a5ff43000 r--s 00000000 08:03 5249556                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.version.jar
+7f9a5ff43000-7f9a5ff45000 r--s 00018000 08:03 5249596                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.jdbcsqlite.jar
+7f9a5ff45000-7f9a5ff47000 r--s 0000e000 08:03 5249593                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.infrastructure.jar
+7f9a5ff47000-7f9a5ff4f000 r--s 0004f000 08:03 5249598                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.ui.ientity.jar
+7f9a5ff4f000-7f9a5ff55000 r--s 00048000 08:03 5249592                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-lang3-3.1.jar
+7f9a5ff55000-7f9a5ff7f000 r--s 001e9000 08:03 5249605                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/guava-15.0.jar
+7f9a5ff7f000-7f9a5ff80000 r--s 00005000 08:03 5249543                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.ui.quartus.jar
+7f9a5ff80000-7f9a5ff82000 r--s 00004000 08:03 5249683                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/mydoggy-res.jar
+7f9a5ff82000-7f9a5ff84000 r--s 00007000 08:03 5249651                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/mydoggy-api.jar
+7f9a5ff84000-7f9a5ff94000 r--s 000a4000 08:03 5249617                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/mydoggy-plaf.jar
+7f9a5ff94000-7f9a5ff96000 r--s 00010000 08:03 5249635                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/miglayout15-swing.jar
+7f9a5ff96000-7f9a5ffa0000 r--s 00052000 08:03 5249565                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.ui.jar
+7f9a5ffa0000-7f9a5ffae000 r--s 0007b000 08:03 5249681                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.componenteditor2.jar
+7f9a5ffae000-7f9a5ffb2000 r--s 00022000 08:03 5249553                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/binding-2.0.6.jar
+7f9a5ffb2000-7f9a5ffb9000 r--s 00094000 08:03 5249578                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/beansbinding-1.2.1.jar
+7f9a5ffb9000-7f9a5ffbc000 r--s 00011000 08:03 5249602                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/basicmodel.jar
+7f9a5ffbc000-7f9a5ffbd000 r--s 00007000 08:03 5249670                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/asm-commons-3.1.jar
+7f9a5ffbd000-7f9a5ffbe000 r--s 0000a000 08:03 5249667                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/asm-3.1.jar
+7f9a5ffbe000-7f9a5ffc2000 r--s 0004a000 08:03 5249625                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/appframework-1.03.jar
+7f9a5ffc2000-7f9a5ffc3000 r--s 00002000 08:03 5249669                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/TableLayout.jar
+7f9a5ffc3000-7f9a5ffc5000 r--s 00009000 08:03 5249649                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-pool.jar
+7f9a5ffc5000-7f9a5ffd2000 r--s 0007c000 08:03 5249633                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-collections.jar
+7f9a5ffd2000-7f9a5ffd5000 ---p 00000000 00:00 0 
+7f9a5ffd5000-7f9a600d7000 rw-p 00000000 00:00 0 
+7f9a600d7000-7f9a600d9000 r--s 00008000 08:03 5249587                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-logging.jar
+7f9a600d9000-7f9a600dc000 r--s 0001f000 08:03 5249590                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-beanutils.jar
+7f9a600dc000-7f9a600df000 r--s 00018000 08:03 5249562                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-digester.jar
+7f9a600df000-7f9a600e3000 r--s 00036000 08:03 5249668                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/QuickServer.jar
+7f9a600e3000-7f9a600e4000 r--s 0000d000 08:03 5249579                    /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/Nlview.jar
+7f9a600e4000-7f9a600ec000 rw-s 00000000 08:03 3408729                    /tmp/hsperfdata_ngocsang/3341
+7f9a600ec000-7f9a600ed000 rw-p 00000000 00:00 0 
+7f9a600ed000-7f9a600ee000 ---p 00000000 00:00 0 
+7f9a600ee000-7f9a600f5000 r--s 00000000 08:03 1968944                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f9a600f5000-7f9a600f7000 rw-p 00000000 00:00 0 
+7f9a600f7000-7f9a600f8000 r--p 00025000 08:03 266866                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f9a600f8000-7f9a600f9000 rw-p 00026000 08:03 266866                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f9a600f9000-7f9a600fa000 rw-p 00000000 00:00 0 
+7fff67932000-7fff67958000 rw-p 00000000 00:00 0                          [stack]
+7fff6795e000-7fff67960000 r--p 00000000 00:00 0                          [vvar]
+7fff67960000-7fff67962000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx1500M -XX:+UseSerialGC 
+java_command: com.altera.ipedit.QsysEditorApp --project-dir=/home/ngocsang/soc_dma/sockit_ghrd_lab4/ --system-info=DEVICE_FAMILY=Cyclone V --system-info=DEVICE=5CSXFC6D6F31C8ES --system-info=DEVICE_SPEEDGRADE=8_H6 --host-controller
+java_class_path (initial): /home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/Nlview.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/QuickServer.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/TableLayout.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/appframework-1.03.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/asm-3.1.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/asm-commons-3.1.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/basicmodel.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/beansbinding-1.2.1.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/binding-2.0.6.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.componenteditor2.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.app_lib.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.editor.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.elements.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.core.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.hal.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.lwhal.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.schema.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.scripting.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.commandline.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.cpexample.jar:/home/ngocsang/altera_lite/16.0/quartus/sopc_b
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/ngocsang/altera_lite/16.0/quartus/linux64:/home/ngocsang/altera_lite/16.0/quartus/adm:/home/ngocsang/altera_lite/16.0/quartus/linux64:/home/ngocsang/altera_lite/16.0/embedded/host_tools/mentor/gnu/arm/baremetal/bin:/home/ngocsang/altera_lite/16.0/embedded/host_tools/altera/preloadergen:/home/ngocsang/altera_lite/16.0/embedded/host_tools/altera/mkimage:/home/ngocsang/altera_lite/16.0/embedded/host_tools/altera/mkpimage:/home/ngocsang/altera_lite/16.0/embedded/host_tools/altera/device_tree:/home/ngocsang/altera_lite/16.0/embedded/host_tools/altera/diskutils:/home/ngocsang/altera_lite/16.0/embedded/host_tools/altera/imagecat:/home/ngocsang/altera_lite/16.0/embedded/host_tools/altera/secureboot:/home/ngocsang/altera_lite/16.0/embedded/host_tools/gnu/dtc:/home/ngocsang/altera_lite/16.0/embedded/ds-5/sw/gcc/bin:/home/ngocsang/altera_lite/16.0/embedded/ds-5/sw/ARMCompiler5.06u1/bin:/home/ngocsang/altera_lite/16.0/embedded/ds-5/bin:/home/ngocsang/altera_lite/16.0/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin:/home/ngocsang/altera_lite/16.0/nios2eds/sdk2/bin:/home/ngocsang/altera_lite/16.0/nios2eds/bin:/home/ngocsang/altera_lite/16.0/quartus/bin:/home/ngocsang/altera_lite/16.0/quartus/sopc_builder/bin:/home/ngocsang/bin:/home/ngocsang/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+LD_LIBRARY_PATH=/home/ngocsang/altera_lite/16.0/quartus/linux64:/home/ngocsang/altera_lite/16.0/quartus/linux64:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa2fc90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0xa2fc90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x89b4b0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: SIG_IGN, sa_mask[0]=0x00001000, sa_flags=0x10000000
+SIGXFSZ: SIG_IGN, sa_mask[0]=0x01000000, sa_flags=0x10000000
+SIGILL: [libjvm.so+0x89b4b0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x89cc50], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x89df00], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libcusp160_parser.so+0x13ba40], sa_mask[0]=0x00000002, sa_flags=0x10000000
+SIGTERM: [libcusp160_parser.so+0x13ba40], sa_mask[0]=0x00004000, sa_flags=0x10000000
+SIGQUIT: [libjvm.so+0x89df00], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.1 LTS"
+
+uname:Linux 4.4.0-47-generic #68-Ubuntu SMP Wed Oct 26 19:39:52 UTC 2016 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 10240k, CORE 0k, NPROC 15174, NOFILE 65536, AS infinity
+load average:16.31 5.68 3.49
+
+/proc/meminfo:
+MemTotal:        3923756 kB
+MemFree:         2854160 kB
+MemAvailable:    3518848 kB
+Buffers:           58184 kB
+Cached:           795004 kB
+SwapCached:        36956 kB
+Active:           465908 kB
+Inactive:         490272 kB
+Active(anon):      72672 kB
+Inactive(anon):    37552 kB
+Active(file):     393236 kB
+Inactive(file):   452720 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       7812092 kB
+SwapFree:        6362384 kB
+Dirty:               896 kB
+Writeback:             0 kB
+AnonPages:         87356 kB
+Mapped:            35132 kB
+Shmem:              7256 kB
+Slab:              69404 kB
+SReclaimable:      42832 kB
+SUnreclaim:        26572 kB
+KernelStack:        2672 kB
+PageTables:         6300 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     9773968 kB
+Committed_AS:    1602020 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     38912 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      141548 kB
+DirectMap2M:     3930112 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, ht, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x1c
+cpu MHz		: 2900.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4988.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x1c
+cpu MHz		: 3080.957
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4988.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x1c
+cpu MHz		: 2900.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4988.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz
+stepping	: 9
+microcode	: 0x1c
+cpu MHz		: 2913.085
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm epb tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		:
+bogomips	: 4988.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 3923756k(2854160k free), swap 7812092k(6362384k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.5-b02) for linux-amd64 JRE (1.8.0_05-b13), built on Mar 18 2014 00:29:27 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Wed Nov 16 02:19:49 2016
+elapsed time: 6577 seconds
+

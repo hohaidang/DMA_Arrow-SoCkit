@@ -1,0 +1,156 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/hohaidang/sockit_ghrd_lab4/soc_system.qsys --synthesis=VERILOG --output-directory=/home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis --family="Cyclone V" --part=5CSXFC6D6F31C8ES
+Progress: Loading sockit_ghrd_lab4/soc_system.qsys
+Progress: Reading input file
+Progress: Adding DDR3_FPGA [altera_mem_if_ddr3_emif 16.0]
+Progress: Parameterizing module DDR3_FPGA
+Progress: Adding clk_0 [clock_source 16.0]
+Progress: Parameterizing module clk_0
+Progress: Adding dma_0 [altera_avalon_dma 16.0]
+Progress: Parameterizing module dma_0
+Progress: Adding hps_0 [altera_hps 16.0]
+Progress: Parameterizing module hps_0
+Progress: Adding hps_only_master [altera_jtag_avalon_master 16.0]
+Progress: Parameterizing module hps_only_master
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 16.0]
+Progress: Parameterizing module jtag_uart
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: soc_system.DDR3_FPGA.pll_bridge: pll_bridge.pll_sharing cannot be both connected and exported
+Info: soc_system.hps_0: HPS Main PLL counter settings: n = 0  m = 63
+Info: soc_system.hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Info: soc_system.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Warning: soc_system.dma_0: Interrupt sender dma_0.irq is not connected to an interrupt receiver
+Info: soc_system: Generating soc_system "soc_system" for QUARTUS_SYNTH
+Info: Inserting clock-crossing logic between cmd_demux.src0 and cmd_mux.sink0
+Info: Inserting clock-crossing logic between cmd_demux_001.src0 and cmd_mux.sink1
+Info: Inserting clock-crossing logic between cmd_demux_002.src0 and cmd_mux.sink2
+Info: Inserting clock-crossing logic between rsp_demux.src0 and rsp_mux.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src1 and rsp_mux_001.sink0
+Info: Inserting clock-crossing logic between rsp_demux.src2 and rsp_mux_002.sink0
+Warning: hps_0.f2h_irq0: Cannot connect clock for irq_mapper.sender
+Warning: hps_0.f2h_irq0: Cannot connect reset for irq_mapper.sender
+Warning: hps_0.f2h_irq1: Cannot connect clock for irq_mapper_001.sender
+Warning: hps_0.f2h_irq1: Cannot connect reset for irq_mapper_001.sender
+Info: DDR3_FPGA: "soc_system" instantiated altera_mem_if_ddr3_emif "DDR3_FPGA"
+Info: dma_0: softresetEnable = 1
+Info: dma_0: Starting RTL generation for module 'soc_system_dma_0'
+Info: dma_0:   Generation command is [exec /home/hohaidang/Programs/altera/16.0/quartus/linux64//perl/bin/perl -I /home/hohaidang/Programs/altera/16.0/quartus/linux64//perl/lib -I /home/hohaidang/Programs/altera/16.0/quartus/sopc_builder/bin/europa -I /home/hohaidang/Programs/altera/16.0/quartus/sopc_builder/bin/perl_lib -I /home/hohaidang/Programs/altera/16.0/quartus/sopc_builder/bin -I /home/hohaidang/Programs/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/hohaidang/Programs/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma -- /home/hohaidang/Programs/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma/generate_rtl.pl --name=soc_system_dma_0 --dir=/tmp/alt7277_6771707661224547138.dir/0001_dma_0_gen/ --quartus_dir=/home/hohaidang/Programs/altera/16.0/quartus --verilog --config=/tmp/alt7277_6771707661224547138.dir/0001_dma_0_gen//soc_system_dma_0_component_configuration.pl  --do_build_sim=0  ]
+Info: dma_0: # 2017.04.21 19:45:11 (*)   soc_system_dma_0: allowing these transactions: quadword, doubleword, word, hw, byte_access
+Info: dma_0: Done RTL generation for module 'soc_system_dma_0'
+Info: dma_0: "soc_system" instantiated altera_avalon_dma "dma_0"
+Info: hps_0: "Running  for module: hps_0"
+Info: hps_0: HPS Main PLL counter settings: n = 0  m = 63
+Info: hps_0: HPS peripherial PLL counter settings: n = 0  m = 39
+Info: hps_0: "soc_system" instantiated altera_hps "hps_0"
+Info: hps_only_master: "soc_system" instantiated altera_jtag_avalon_master "hps_only_master"
+Info: jtag_uart: Starting RTL generation for module 'soc_system_jtag_uart'
+Info: jtag_uart:   Generation command is [exec /home/hohaidang/Programs/altera/16.0/quartus/linux64/perl/bin/perl -I /home/hohaidang/Programs/altera/16.0/quartus/linux64/perl/lib -I /home/hohaidang/Programs/altera/16.0/quartus/sopc_builder/bin/europa -I /home/hohaidang/Programs/altera/16.0/quartus/sopc_builder/bin/perl_lib -I /home/hohaidang/Programs/altera/16.0/quartus/sopc_builder/bin -I /home/hohaidang/Programs/altera/16.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/hohaidang/Programs/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/hohaidang/Programs/altera/16.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=soc_system_jtag_uart --dir=/tmp/alt7277_6771707661224547138.dir/0002_jtag_uart_gen/ --quartus_dir=/home/hohaidang/Programs/altera/16.0/quartus --verilog --config=/tmp/alt7277_6771707661224547138.dir/0002_jtag_uart_gen//soc_system_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart: Done RTL generation for module 'soc_system_jtag_uart'
+Info: jtag_uart: "soc_system" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: mm_interconnect_2: "soc_system" instantiated altera_mm_interconnect "mm_interconnect_2"
+Info: irq_mapper: "soc_system" instantiated altera_irq_mapper "irq_mapper"
+Info: irq_mapper_001: "soc_system" instantiated altera_irq_mapper "irq_mapper_001"
+Info: rst_controller: "soc_system" instantiated altera_reset_controller "rst_controller"
+Info: pll0: "DDR3_FPGA" instantiated altera_mem_if_ddr3_pll "pll0"
+Info: p0: Generating clock pair generator
+Info: p0: Generating soc_system_DDR3_FPGA_p0_altdqdqs
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: Remember to run the soc_system_DDR3_FPGA_p0_pin_assignments.tcl
+Info: p0: script after running Synthesis and before Fitting.
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: "DDR3_FPGA" instantiated altera_mem_if_ddr3_phy_core "p0"
+Info: m0: "DDR3_FPGA" instantiated altera_mem_if_ddr3_afi_mux "m0"
+Info: s0: Generating Qsys sequencer system
+Info: s0: QSYS sequencer system generated successfully
+Info: s0: "DDR3_FPGA" instantiated altera_mem_if_ddr3_qseq "s0"
+Info: c0: "DDR3_FPGA" instantiated altera_mem_if_nextgen_ddr3_controller "c0"
+Info: oct0: "DDR3_FPGA" instantiated altera_mem_if_oct "oct0"
+Info: dll0: "DDR3_FPGA" instantiated altera_mem_if_dll "dll0"
+Info: mm_interconnect_0: "DDR3_FPGA" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: fpga_interfaces: "hps_0" instantiated altera_interface_generator "fpga_interfaces"
+Info: hps_io: "hps_0" instantiated altera_hps_io "hps_io"
+Info: jtag_phy_embedded_in_jtag_master: "hps_only_master" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "hps_only_master" instantiated timing_adapter "timing_adt"
+Info: fifo: "hps_only_master" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "hps_only_master" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "hps_only_master" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "hps_only_master" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "hps_only_master" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "hps_only_master" instantiated channel_adapter "p2b_adapter"
+Info: dma_0_write_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "dma_0_write_master_translator"
+Info: DDR3_FPGA_avl_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "DDR3_FPGA_avl_translator"
+Info: hps_0_h2f_axi_master_agent: "mm_interconnect_0" instantiated altera_merlin_axi_master_ni "hps_0_h2f_axi_master_agent"
+Info: dma_0_write_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "dma_0_write_master_agent"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_master_agent.sv
+Info: DDR3_FPGA_avl_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "DDR3_FPGA_avl_agent"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_slave_agent.sv
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: DDR3_FPGA_avl_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "DDR3_FPGA_avl_burst_adapter"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: hps_0_h2f_axi_master_wr_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "hps_0_h2f_axi_master_wr_rsp_width_adapter"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: crosser: "mm_interconnect_0" instantiated altera_avalon_st_handshake_clock_crosser "crosser"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_avalon_st_clock_crosser.v
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Warning: Overwriting different file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_std_synchronizer_nocut.v
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_1" instantiated altera_merlin_router "router_002"
+Info: hps_0_h2f_lw_axi_master_wr_limiter: "mm_interconnect_1" instantiated altera_merlin_traffic_limiter "hps_0_h2f_lw_axi_master_wr_limiter"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_traffic_limiter.sv
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_reorder_memory.sv
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_1" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: hps_0_f2h_axi_slave_agent: "mm_interconnect_2" instantiated altera_merlin_axi_slave_ni "hps_0_f2h_axi_slave_agent"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: router: "mm_interconnect_2" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_2" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_2" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_2" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux: "mm_interconnect_2" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: ng0: "c0" instantiated altera_mem_if_nextgen_ddr3_controller_core "ng0"
+Info: a0: "c0" instantiated alt_mem_ddrx_mm_st_converter "a0"
+Info: border: "hps_io" instantiated altera_interface_generator "border"
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_mem_if_dll_cyclonev.sv
+Info: Reusing file /home/hohaidang/sockit_ghrd_lab4/soc_system/synthesis/submodules/altera_mem_if_oct_cyclonev.sv
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: soc_system: Done "soc_system" with 66 modules, 262 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

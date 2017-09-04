@@ -1,0 +1,965 @@
+name: soc_system_mem_if_ddr3_emif_0_s0
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/soc_system_mem_if_ddr3_emif_0_s0.v (44391)
+generated files (children of this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_mem_if_sequencer_rst.sv (3274)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_mem_if_sequencer_cpu_cv_synth_cpu_inst.v (85354)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_mem_if_sequencer_cpu_cv_synth_cpu_inst_test_bench.v (32957)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_mgr.sv (36324)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_siii_wrapper.sv (4704)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_siii_phase_decode.v (11473)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_sv_wrapper.sv (7107)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_sv_phase_decode.v (3939)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_acv_wrapper.sv (5334)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_acv_phase_decode.v (2503)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_reg_file.v (2545)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_reg_file.sv (7189)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_phy_mgr.sv (18655)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_data_mgr.sv (3684)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ddr3.v (7438)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ac_ROM_reg.v (1407)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_bitcheck.v (3299)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_core.sv (19015)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_data_broadcast.v (2289)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_data_decoder.v (2809)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_datamux.v (1691)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_di_buffer.v (3934)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_di_buffer_wrap.v (2631)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_dm_decoder.v (1685)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_generic.sv (7777)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_inst_ROM_reg.v (1430)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_jumplogic.v (3232)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_lfsr72.v (1337)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_lfsr36.v (2025)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_lfsr12.v (1390)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_pattern_fifo.v (2756)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ram.v (1263)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ram_csr.v (2433)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_read_datapath.v (3483)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_write_decoder.v (2746)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ac_ROM_no_ifdef_params.v (3035)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_inst_ROM_no_ifdef_params.v (2953)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_mem_if_sequencer_mem_no_ifdef_params.sv (2997)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_mm_bridge.v (11621)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0.v (306187)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_master_translator.sv (21306)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_slave_translator.sv (17188)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_master_agent.sv (12423)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_slave_agent.sv (28313)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_burst_uncompressor.sv (13482)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_sc_fifo.v (34467)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router.sv (9286)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_001.sv (8258)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_002.sv (7766)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router.sv (7588)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_003.sv (8046)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_005.sv (7683)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_traffic_limiter.sv (38705)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_reorder_memory.sv (11349)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_sc_fifo.v (34467)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_st_pipeline_base.v (4707)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux.sv (6739)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_001.sv (4252)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002.sv (3612)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux.sv (3023)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_003.sv (13034)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_005.sv (12183)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_003.sv (4880)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_005.sv (4246)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux.sv (14715)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_001.sv (11495)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_002.sv (3026)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_irq_mapper.sv (1713)
+Instantiates the following:
+   sequencer_rst : altera_mem_if_sequencer_rst
+   cpu_inst : altera_mem_if_sequencer_cpu_cv_synth_cpu_inst
+   sequencer_scc_mgr_inst : sequencer_scc_mgr
+   sequencer_reg_file_inst : sequencer_reg_file
+   sequencer_phy_mgr_inst : sequencer_phy_mgr
+   sequencer_data_mgr_inst : sequencer_data_mgr
+   sequencer_rw_mgr_inst : rw_manager_ddr3
+   sequencer_mem : altera_mem_if_sequencer_mem_no_ifdef_params
+   seq_bridge : altera_avalon_mm_bridge
+   mm_interconnect_0 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0
+   irq_mapper : soc_system_mem_if_ddr3_emif_0_s0_irq_mapper
+ 
+name: altera_mem_if_sequencer_rst
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_mem_if_sequencer_rst.sv (3274)
+ 
+name: altera_mem_if_sequencer_cpu_cv_synth_cpu_inst
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_mem_if_sequencer_cpu_cv_synth_cpu_inst.v (85354)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_mem_if_sequencer_cpu_cv_synth_cpu_inst_test_bench.v (32957)
+ 
+name: sequencer_scc_mgr
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_mgr.sv (36324)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_siii_wrapper.sv (4704)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_siii_phase_decode.v (11473)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_sv_wrapper.sv (7107)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_sv_phase_decode.v (3939)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_acv_wrapper.sv (5334)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_acv_phase_decode.v (2503)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_scc_reg_file.v (2545)
+ 
+name: sequencer_reg_file
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_reg_file.sv (7189)
+ 
+name: sequencer_phy_mgr
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_phy_mgr.sv (18655)
+ 
+name: sequencer_data_mgr
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/sequencer_data_mgr.sv (3684)
+ 
+name: rw_manager_ddr3
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ddr3.v (7438)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ac_ROM_reg.v (1407)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_bitcheck.v (3299)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_core.sv (19015)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_data_broadcast.v (2289)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_data_decoder.v (2809)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_datamux.v (1691)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_di_buffer.v (3934)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_di_buffer_wrap.v (2631)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_dm_decoder.v (1685)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_generic.sv (7777)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_inst_ROM_reg.v (1430)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_jumplogic.v (3232)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_lfsr72.v (1337)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_lfsr36.v (2025)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_lfsr12.v (1390)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_pattern_fifo.v (2756)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ram.v (1263)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ram_csr.v (2433)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_read_datapath.v (3483)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_write_decoder.v (2746)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_ac_ROM_no_ifdef_params.v (3035)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/rw_manager_inst_ROM_no_ifdef_params.v (2953)
+ 
+name: altera_mem_if_sequencer_mem_no_ifdef_params
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_mem_if_sequencer_mem_no_ifdef_params.sv (2997)
+ 
+name: altera_avalon_mm_bridge
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_mm_bridge.v (11621)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0.v (306187)
+generated files (children of this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_master_translator.sv (21306)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_slave_translator.sv (17188)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_master_agent.sv (12423)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_slave_agent.sv (28313)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_burst_uncompressor.sv (13482)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_sc_fifo.v (34467)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router.sv (9286)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_001.sv (8258)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_002.sv (7766)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router.sv (7588)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_003.sv (8046)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_005.sv (7683)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_traffic_limiter.sv (38705)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_reorder_memory.sv (11349)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_sc_fifo.v (34467)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_st_pipeline_base.v (4707)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux.sv (6739)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_001.sv (4252)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002.sv (3612)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux.sv (3023)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_003.sv (13034)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_005.sv (12183)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_003.sv (4880)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_005.sv (4246)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux.sv (14715)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_001.sv (11495)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_002.sv (3026)
+Instantiates the following:
+   cpu_inst_data_master_translator, seq_bridge_m0_translator, cpu_inst_instruction_master_translator : altera_merlin_master_translator
+   sequencer_phy_mgr_inst_avl_translator, sequencer_data_mgr_inst_avl_translator, sequencer_rw_mgr_inst_avl_translator, sequencer_mem_s1_translator, sequencer_scc_mgr_inst_avl_translator, sequencer_reg_file_inst_avl_translator : altera_merlin_slave_translator
+   cpu_inst_data_master_translator_avalon_universal_master_0_agent, seq_bridge_m0_translator_avalon_universal_master_0_agent, cpu_inst_instruction_master_translator_avalon_universal_master_0_agent : altera_merlin_master_agent
+   sequencer_phy_mgr_inst_avl_translator_avalon_universal_slave_0_agent, sequencer_data_mgr_inst_avl_translator_avalon_universal_slave_0_agent, sequencer_rw_mgr_inst_avl_translator_avalon_universal_slave_0_agent, sequencer_mem_s1_translator_avalon_universal_slave_0_agent, sequencer_scc_mgr_inst_avl_translator_avalon_universal_slave_0_agent, sequencer_reg_file_inst_avl_translator_avalon_universal_slave_0_agent : altera_merlin_slave_agent
+   sequencer_phy_mgr_inst_avl_translator_avalon_universal_slave_0_agent_rsp_fifo, sequencer_data_mgr_inst_avl_translator_avalon_universal_slave_0_agent_rsp_fifo, sequencer_rw_mgr_inst_avl_translator_avalon_universal_slave_0_agent_rsp_fifo, sequencer_mem_s1_translator_avalon_universal_slave_0_agent_rsp_fifo, sequencer_scc_mgr_inst_avl_translator_avalon_universal_slave_0_agent_rsp_fifo, sequencer_reg_file_inst_avl_translator_avalon_universal_slave_0_agent_rsp_fifo : altera_avalon_sc_fifo
+   addr_router : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router
+   addr_router_001 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_001
+   addr_router_002 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_002
+   id_router, id_router_001, id_router_002, id_router_004 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router
+   id_router_003 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_003
+   id_router_005 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_005
+   limiter : altera_merlin_traffic_limiter
+   cmd_xbar_demux : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux
+   cmd_xbar_demux_001 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_001
+   cmd_xbar_demux_002, rsp_xbar_demux, rsp_xbar_demux_001, rsp_xbar_demux_002, rsp_xbar_demux_004 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002
+   cmd_xbar_mux, cmd_xbar_mux_001, cmd_xbar_mux_002, cmd_xbar_mux_004 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux
+   cmd_xbar_mux_003 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_003
+   cmd_xbar_mux_005 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_005
+   rsp_xbar_demux_003 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_003
+   rsp_xbar_demux_005 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_005
+   rsp_xbar_mux : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux
+   rsp_xbar_mux_001 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_001
+   rsp_xbar_mux_002 : soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_002
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_irq_mapper
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_irq_mapper.sv (1713)
+ 
+name: altera_merlin_master_translator
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_master_translator.sv (21306)
+ 
+name: altera_merlin_slave_translator
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_slave_translator.sv (17188)
+ 
+name: altera_merlin_master_agent
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_master_agent.sv (12423)
+ 
+name: altera_merlin_slave_agent
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_slave_agent.sv (28313)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_burst_uncompressor.sv (13482)
+ 
+name: altera_avalon_sc_fifo
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_sc_fifo.v (34467)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router.sv (9286)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_001
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_001.sv (8258)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_002
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_002.sv (7766)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router.sv (7588)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_003
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_003.sv (8046)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_005
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_005.sv (7683)
+ 
+name: altera_merlin_traffic_limiter
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_traffic_limiter.sv (38705)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_reorder_memory.sv (11349)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_sc_fifo.v (34467)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_st_pipeline_base.v (4707)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux.sv (6739)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_001
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_001.sv (4252)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002.sv (3612)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux.sv (3023)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_003
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_003.sv (13034)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_005
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_005.sv (12183)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_003
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_003.sv (4880)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_005
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_005.sv (4246)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux.sv (14715)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_001
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_001.sv (11495)
+ 
+name: soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_002
+generated files (just this core):
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv (9530)
+   E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_002.sv (3026)
+ 
+ 
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.avl_clk: Timing: ELA:1/0.001s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.sequencer_rst: Timing: VAL:1/0.000s ELA:1/0.070s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.cpu_inst: Timing: VAL:12/0.002s/0.005s ELA:12/0.025s/0.246s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.sequencer_scc_mgr_inst: Timing: VAL:1/0.001s ELA:1/0.004s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.sequencer_reg_file_inst: Timing: VAL:1/0.001s ELA:1/0.004s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.sequencer_phy_mgr_inst: Timing: VAL:1/0.001s ELA:1/0.004s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.sequencer_data_mgr_inst: Timing: VAL:1/0.000s ELA:1/0.002s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.afi_clk: Timing: ELA:1/0.001s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.afi_reset: Timing: ELA:1/0.001s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.sequencer_rw_mgr_inst: Timing: VAL:1/0.001s ELA:1/0.004s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.sequencer_mem: Timing: VAL:2/0.000s/0.000s ELA:2/0.003s/0.003s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.scc_clk: Timing: ELA:1/0.000s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.scc_reset: Timing: ELA:1/0.001s
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0.seq_bridge: Timing: ELA:2/0.001s/0.001s
+ [Warning] soc_system_mem_if_ddr3_emif_0_s0.sequencer_rw_mgr_inst: <b>sequencer_rw_mgr_inst.csr</b> must be exported, or connected to a matching conduit.
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: Timing: VAL:1/0.001s COM:1/1.448s
+ [Info] soc_system_mem_if_ddr3_emif_0_s0: Generating <b>qsys_sequencer_110</b> "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" for QUARTUS_SYNTH
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 0 starting:qsys_sequencer_110 "soc_system_mem_if_ddr3_emif_0_s0"
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Debug] Transform: PipelineBridgeSwap
+ [Info] pipeline_bridge_swap_transform: After transform: <b>14</b> modules, <b>31</b> connections
+ [Debug] Transform: ClockCrossingBridgeSwap
+ [Debug] Transform: QsysBetaIPSwap
+ [Debug] Transform: CustomInstructionTransform
+ [Info] No custom instruction connections, skipping transform 
+ [Debug] Transform: MMTransform
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>10</b> modules, <b>25</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Info] merlin_translator_transform: After transform: <b>19</b> modules, <b>52</b> connections
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform merlin_domain_transform not run on matched interfaces cpu_inst.data_master and cpu_inst_data_master_translator.avalon_anti_master_0
+ [Debug] Transform merlin_domain_transform not run on matched interfaces seq_bridge.m0 and seq_bridge_m0_translator.avalon_anti_master_0
+ [Debug] Transform merlin_domain_transform not run on matched interfaces cpu_inst.instruction_master and cpu_inst_instruction_master_translator.avalon_anti_master_0
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Debug] Transform merlin_domain_transform not run on matched interfaces sequencer_phy_mgr_inst_avl_translator.avalon_anti_slave_0 and sequencer_phy_mgr_inst.avl
+ [Debug] Transform merlin_domain_transform not run on matched interfaces sequencer_data_mgr_inst_avl_translator.avalon_anti_slave_0 and sequencer_data_mgr_inst.avl
+ [Debug] Transform merlin_domain_transform not run on matched interfaces sequencer_rw_mgr_inst_avl_translator.avalon_anti_slave_0 and sequencer_rw_mgr_inst.avl
+ [Debug] Transform merlin_domain_transform not run on matched interfaces sequencer_mem_s1_translator.avalon_anti_slave_0 and sequencer_mem.s1
+ [Debug] Transform merlin_domain_transform not run on matched interfaces sequencer_scc_mgr_inst_avl_translator.avalon_anti_slave_0 and sequencer_scc_mgr_inst.avl
+ [Debug] Transform merlin_domain_transform not run on matched interfaces sequencer_reg_file_inst_avl_translator.avalon_anti_slave_0 and sequencer_reg_file_inst.avl
+ [Info] merlin_domain_transform: After transform: <b>35</b> modules, <b>136</b> connections
+ [Debug] Transform: RouterTransform
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Info] merlin_router_transform: After transform: <b>44</b> modules, <b>163</b> connections
+ [Debug] Transform: TrafficLimiterTransform
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Info] merlin_traffic_limiter_transform: After transform: <b>45</b> modules, <b>167</b> connections
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Info] merlin_network_to_switch_transform: After transform: <b>62</b> modules, <b>203</b> connections
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Info] limiter_update_transform: After transform: <b>62</b> modules, <b>204</b> connections
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Info] merlin_clock_and_reset_bridge_transform: After transform: <b>64</b> modules, <b>266</b> connections
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Info] merlin_hierarchy_transform: After transform: <b>15</b> modules, <b>33</b> connections
+ [Info] merlin_mm_transform: After transform: <b>15</b> modules, <b>33</b> connections
+ [Debug] Transform: InterruptMapperTransform
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Info] merlin_interrupt_mapper_transform: After transform: <b>16</b> modules, <b>36</b> connections
+ [Debug] Transform: InterruptSyncTransform
+ [Debug] Transform: InterruptFanoutTransform
+ [Debug] Transform: AvalonStreamingTransform
+ [Debug] Transform: ResetAdaptation
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>altera_mem_if_sequencer_rst</b> "<b>submodules/altera_mem_if_sequencer_rst</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>altera_mem_if_sequencer_cpu</b> "<b>submodules/altera_mem_if_sequencer_cpu_cv_synth_cpu_inst</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>sequencer_scc_mgr_110</b> "<b>submodules/sequencer_scc_mgr</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>sequencer_reg_file_111</b> "<b>submodules/sequencer_reg_file</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>sequencer_phy_mgr_100</b> "<b>submodules/sequencer_phy_mgr</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>sequencer_data_mgr_110</b> "<b>submodules/sequencer_data_mgr</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>sequencer_rw_mgr_ddr3_110</b> "<b>submodules/rw_manager_ddr3</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>altera_mem_if_sequencer_mem</b> "<b>submodules/altera_mem_if_sequencer_mem_no_ifdef_params</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>altera_avalon_mm_bridge</b> "<b>submodules/altera_avalon_mm_bridge</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>altera_merlin_interconnect_wrapper</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" reuses <b>altera_irq_mapper</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_irq_mapper</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 10 starting:altera_mem_if_sequencer_rst "submodules/altera_mem_if_sequencer_rst"
+ [Info] sequencer_rst: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>altera_mem_if_sequencer_rst</b> "<b>sequencer_rst</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 9 starting:altera_mem_if_sequencer_cpu "submodules/altera_mem_if_sequencer_cpu_cv_synth_cpu_inst"
+ [Info] cpu_inst: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>altera_mem_if_sequencer_cpu</b> "<b>cpu_inst</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 8 starting:sequencer_scc_mgr_110 "submodules/sequencer_scc_mgr"
+ [Info] sequencer_scc_mgr_inst: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>sequencer_scc_mgr_110</b> "<b>sequencer_scc_mgr_inst</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 7 starting:sequencer_reg_file_111 "submodules/sequencer_reg_file"
+ [Info] sequencer_reg_file_inst: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>sequencer_reg_file_111</b> "<b>sequencer_reg_file_inst</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 6 starting:sequencer_phy_mgr_100 "submodules/sequencer_phy_mgr"
+ [Info] sequencer_phy_mgr_inst: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>sequencer_phy_mgr_100</b> "<b>sequencer_phy_mgr_inst</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 5 starting:sequencer_data_mgr_110 "submodules/sequencer_data_mgr"
+ [Info] sequencer_data_mgr_inst: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>sequencer_data_mgr_110</b> "<b>sequencer_data_mgr_inst</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 4 starting:sequencer_rw_mgr_ddr3_110 "submodules/rw_manager_ddr3"
+ [Info] sequencer_rw_mgr_inst: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>sequencer_rw_mgr_ddr3_110</b> "<b>sequencer_rw_mgr_inst</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 3 starting:altera_mem_if_sequencer_mem "submodules/altera_mem_if_sequencer_mem_no_ifdef_params"
+ [Info] sequencer_mem: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>altera_mem_if_sequencer_mem</b> "<b>sequencer_mem</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 2 starting:altera_avalon_mm_bridge "submodules/altera_avalon_mm_bridge"
+ [Info] seq_bridge: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>altera_avalon_mm_bridge</b> "<b>seq_bridge</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 1 starting:altera_merlin_interconnect_wrapper "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0"
+ [Progress] min: 0
+ [Progress] max: 1
+ [Progress] current: 1
+ [Debug] Transform: PipelineBridgeSwap
+ [Info] pipeline_bridge_swap_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: ClockCrossingBridgeSwap
+ [Debug] Transform: QsysBetaIPSwap
+ [Debug] Transform: CustomInstructionTransform
+ [Info] No custom instruction connections, skipping transform 
+ [Debug] Transform: MMTransform
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>0</b> modules, <b>0</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Info] No Avalon connections, skipping transform 
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform: RouterTransform
+ [Debug] Transform: TrafficLimiterTransform
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Info] merlin_hierarchy_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>0</b> modules, <b>0</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Info] No Avalon connections, skipping transform 
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform: RouterTransform
+ [Debug] Transform: TrafficLimiterTransform
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Info] merlin_hierarchy_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>0</b> modules, <b>0</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Info] No Avalon connections, skipping transform 
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform: RouterTransform
+ [Debug] Transform: TrafficLimiterTransform
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Info] merlin_hierarchy_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>0</b> modules, <b>0</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Info] No Avalon connections, skipping transform 
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform: RouterTransform
+ [Debug] Transform: TrafficLimiterTransform
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Info] merlin_hierarchy_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>0</b> modules, <b>0</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Info] No Avalon connections, skipping transform 
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform: RouterTransform
+ [Debug] Transform: TrafficLimiterTransform
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Info] merlin_hierarchy_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>0</b> modules, <b>0</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Info] No Avalon connections, skipping transform 
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform: RouterTransform
+ [Debug] Transform: TrafficLimiterTransform
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Info] merlin_hierarchy_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>0</b> modules, <b>0</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Info] No Avalon connections, skipping transform 
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform: RouterTransform
+ [Debug] Transform: TrafficLimiterTransform
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Info] merlin_hierarchy_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>0</b> modules, <b>0</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Info] No Avalon connections, skipping transform 
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform: RouterTransform
+ [Debug] Transform: TrafficLimiterTransform
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Info] merlin_hierarchy_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: InitialInterconnectTransform
+ [Info] merlin_initial_interconnect_transform: After transform: <b>0</b> modules, <b>0</b> connections
+ [Debug] Transform: TerminalIdAssignmentUpdateTransform
+ [Debug] Transform: DefaultSlaveTransform
+ [Debug] Transform: TranslatorTransform
+ [Info] No Avalon connections, skipping transform 
+ [Debug] Transform: IDPadTransform
+ [Debug] Transform: DomainTransform
+ [Debug] Transform: RouterTransform
+ [Debug] Transform: TrafficLimiterTransform
+ [Debug] Transform: BurstTransform
+ [Debug] Transform: TreeTransform
+ [Debug] Transform: NetworkToSwitchTransform
+ [Debug] Transform: WidthTransform
+ [Debug] Transform: RouterTableTransform
+ [Debug] Transform: ThreadIDMappingTableTransform
+ [Debug] Transform: ClockCrossingTransform
+ [Debug] Transform: PipelineTransform
+ [Debug] Transform: SpotPipelineTransform
+ [Debug] Transform: PerformanceMonitorTransform
+ [Debug] Transform: TrafficLimiterUpdateTransform
+ [Debug] Transform: InsertClockAndResetBridgesTransform
+ [Debug] Transform: InterconnectConnectionsTagger
+ [Debug] Transform: HierarchyTransform
+ [Info] merlin_hierarchy_transform: After transform: <b>54</b> modules, <b>180</b> connections
+ [Debug] Transform: InterruptMapperTransform
+ [Debug] Transform: InterruptSyncTransform
+ [Debug] Transform: InterruptFanoutTransform
+ [Debug] Transform: AvalonStreamingTransform
+ [Debug] Transform: ResetAdaptation
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_master_translator</b> "<b>submodules/altera_merlin_master_translator</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_translator</b> "<b>submodules/altera_merlin_slave_translator</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_master_agent</b> "<b>submodules/altera_merlin_master_agent</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_master_agent</b> "<b>submodules/altera_merlin_master_agent</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_master_agent</b> "<b>submodules/altera_merlin_master_agent</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_slave_agent</b> "<b>submodules/altera_merlin_slave_agent</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_avalon_sc_fifo</b> "<b>submodules/altera_avalon_sc_fifo</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_001</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_002</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_003</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_router</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_005</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_traffic_limiter</b> "<b>submodules/altera_merlin_traffic_limiter</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_001</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_003</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_005</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_003</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_demultiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_005</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_001</b>"
+ [Debug] mm_interconnect_0: "<b>mm_interconnect_0</b>" reuses <b>altera_merlin_multiplexer</b> "<b>submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_002</b>"
+ [Info] mm_interconnect_0: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>altera_merlin_interconnect_wrapper</b> "<b>mm_interconnect_0</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 52 starting:altera_irq_mapper "submodules/soc_system_mem_if_ddr3_emif_0_s0_irq_mapper"
+ [Info] irq_mapper: "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" instantiated <b>altera_irq_mapper</b> "<b>irq_mapper</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 51 starting:altera_merlin_master_translator "submodules/altera_merlin_master_translator"
+ [Info] cpu_inst_data_master_translator: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_master_translator</b> "<b>cpu_inst_data_master_translator</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 48 starting:altera_merlin_slave_translator "submodules/altera_merlin_slave_translator"
+ [Info] sequencer_phy_mgr_inst_avl_translator: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_slave_translator</b> "<b>sequencer_phy_mgr_inst_avl_translator</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 42 starting:altera_merlin_master_agent "submodules/altera_merlin_master_agent"
+ [Info] cpu_inst_data_master_translator_avalon_universal_master_0_agent: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_master_agent</b> "<b>cpu_inst_data_master_translator_avalon_universal_master_0_agent</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 39 starting:altera_merlin_slave_agent "submodules/altera_merlin_slave_agent"
+ [Info] sequencer_phy_mgr_inst_avl_translator_avalon_universal_slave_0_agent: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_slave_agent</b> "<b>sequencer_phy_mgr_inst_avl_translator_avalon_universal_slave_0_agent</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 38 starting:altera_avalon_sc_fifo "submodules/altera_avalon_sc_fifo"
+ [Info] sequencer_phy_mgr_inst_avl_translator_avalon_universal_slave_0_agent_rsp_fifo: "<b>mm_interconnect_0</b>" instantiated <b>altera_avalon_sc_fifo</b> "<b>sequencer_phy_mgr_inst_avl_translator_avalon_universal_slave_0_agent_rsp_fifo</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 27 starting:altera_merlin_router "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router"
+ [Info] addr_router: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 26 starting:altera_merlin_router "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_001"
+ [Info] addr_router_001: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router_001</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 25 starting:altera_merlin_router "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_addr_router_002"
+ [Info] addr_router_002: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_router</b> "<b>addr_router_002</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 24 starting:altera_merlin_router "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router"
+ [Info] id_router: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_router</b> "<b>id_router</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 21 starting:altera_merlin_router "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_003"
+ [Info] id_router_003: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_router</b> "<b>id_router_003</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 19 starting:altera_merlin_router "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_id_router_005"
+ [Info] id_router_005: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_router</b> "<b>id_router_005</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 18 starting:altera_merlin_traffic_limiter "submodules/altera_merlin_traffic_limiter"
+ [Info] limiter: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_traffic_limiter</b> "<b>limiter</b>"
+ [Info] Reusing file <b>E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_avalon_sc_fifo.v</b>
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 17 starting:altera_merlin_demultiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux"
+ [Info] cmd_xbar_demux: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 16 starting:altera_merlin_demultiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_001"
+ [Info] cmd_xbar_demux_001: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux_001</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 15 starting:altera_merlin_demultiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_demux_002"
+ [Info] cmd_xbar_demux_002: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>cmd_xbar_demux_002</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 14 starting:altera_merlin_multiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux"
+ [Info] cmd_xbar_mux: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>cmd_xbar_mux</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 11 starting:altera_merlin_multiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_003"
+ [Info] cmd_xbar_mux_003: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>cmd_xbar_mux_003</b>"
+ [Info] Reusing file <b>E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv</b>
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 9 starting:altera_merlin_multiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_cmd_xbar_mux_005"
+ [Info] cmd_xbar_mux_005: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>cmd_xbar_mux_005</b>"
+ [Info] Reusing file <b>E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv</b>
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 5 starting:altera_merlin_demultiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_003"
+ [Info] rsp_xbar_demux_003: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux_003</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 3 starting:altera_merlin_demultiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_demux_005"
+ [Info] rsp_xbar_demux_005: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_demultiplexer</b> "<b>rsp_xbar_demux_005</b>"
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 2 starting:altera_merlin_multiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux"
+ [Info] rsp_xbar_mux: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux</b>"
+ [Info] Reusing file <b>E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv</b>
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 1 starting:altera_merlin_multiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_001"
+ [Info] rsp_xbar_mux_001: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux_001</b>"
+ [Info] Reusing file <b>E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv</b>
+ [Debug] soc_system_mem_if_ddr3_emif_0_s0: queue size: 0 starting:altera_merlin_multiplexer "submodules/soc_system_mem_if_ddr3_emif_0_s0_mm_interconnect_0_rsp_xbar_mux_002"
+ [Info] rsp_xbar_mux_002: "<b>mm_interconnect_0</b>" instantiated <b>altera_merlin_multiplexer</b> "<b>rsp_xbar_mux_002</b>"
+ [Info] Reusing file <b>E:/SVN/support/sockit_ghrd/soc_system_mem_if_ddr3_emif_0_s0/submodules/altera_merlin_arbitrator.sv</b>
+ [Info] soc_system_mem_if_ddr3_emif_0_s0: Done "<b>soc_system_mem_if_ddr3_emif_0_s0</b>" with 35 modules, 69 files, 995311 bytes

@@ -1,0 +1,22 @@
+Huong dan su dung project:
+1/ Phai cau hinh lai DRAM cho HPS. Vi Linux OS se chiem het 1GB RAM cho nen phai cau hinh lai con 800MB
+   200MB se phuc vu cho qua trinh doc ghi DMA.
+2/ 	$ printenv mmcboot		Print the content of mmcboot
+	Lưu biến này ra 1 file .txt sau đó thêm phần setenv và mem=800M vào.
+	$ setenv mmcboot 'setenv bootargs console=ttyS0,57600 mem=800M root=${mmcroot} rw rootwait;bootz ${loadaddr} - ${fdtaddr}'
+	(Change mem default 1GB → 800MB)
+	$ saveenv				Save environment
+	$ env default -a			Revert to default setting u-boot
+	$ cat /proc/meminfo		Kiểm tra lại sau khi đã configure.
+	Note: 
+	- Các biến "mmcboot", "ramboot" and "qspiboot" cũng có khả năng ảnh hưởng đến việc phân chia lại vùng nhớ RAM. Vì vậy tùy vào OS mà ta có phải setting 2 biến "ramboot" and "qspiboot" nữa hay không? Với GSRD Angstrom thì không cần nhưng với OS Xillibus thì phải set 2 biến này. Cách setting 2 biến này cũng đơn giản chỉ việc thêm mem=800M vào là xong.
+	
+Reference:
+https://digibird1.wordpress.com/playing-with-the-cyclone-v-soc-system-de0-nano-soc-kitatlas-soc/
+
+QC Passed: Xillibus OS. GRSD OS.
+Doi voi Xillibus OS: Phai build project nay truc tiep tren board vi no se yeu dau libc.so.6. 2.17
+Ma Ubuntu 12.04 chi ho tro den phien ban 2.15 thoi. 
+ 
+Project nay build truc tiep tren board duoc. trong thu muc /DMA
+Project nay da add duoc thu vien FFmpeg. Trong thu muc /DMA_FFMPEG
